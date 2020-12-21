@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
@@ -15,6 +20,8 @@
     <title>Kino FIEK</title>
   </head>
   <body>
+    <!--Nav bar, searchbar-->
+
     <nav>
       <ul class="navBar">
         <li><a href="#">Home</a></li>
@@ -32,6 +39,7 @@
         />
       </div>
     </nav>
+    <!--Slideshow-->
 
     <div class="slideshow">
       <div class="slide" onclick="window.location='#';">
@@ -51,6 +59,64 @@
       <a class="next" onclick="setSlide(1)">&#10095;</a>
     </div>
 
+    <!--Movie Catalog-->
+
+    <div class="movies-catalog">
+      <div
+        class="movie"
+        onmouseover="makeVisible(info1)"
+        onmouseout="makeUnvisible(info1)"
+      >
+        <a href="#">
+          <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+        </a>
+        <div id="info1" class="info">
+          <div class="info-title">Movie Info</div>
+          <div class="rating">4.5 &#9733;</div>
+        </div>
+      </div>
+      <div
+        class="movie"
+        onmouseover="makeVisible(info2)"
+        onmouseout="makeUnvisible(info2)"
+      >
+        <a href="#">
+          <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+        </a>
+        <div id="info2" class="info">
+          <div class="info-title">Movie Info</div>
+          <div class="rating">4.5 &#9733;</div>
+        </div>
+      </div>
+      <div
+        class="movie"
+        onmouseover="makeVisible(info3)"
+        onmouseout="makeUnvisible(info3)"
+      >
+        <a href="#">
+          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+        </a>
+        <div id="info3" class="info">
+          <div class="info-title">Movie Info</div>
+          <div class="rating">4.5 &#9733;</div>
+        </div>
+      </div>
+      <div
+        class="movie"
+        onmouseover="makeVisible(info4)"
+        onmouseout="makeUnvisible(info4)"
+      >
+        <a href="#">
+          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+        </a>
+        <div id="info4" class="info">
+          <div class="info-title">Movie Info</div>
+          <div class="rating">4.5 &#9733;</div>
+        </div>
+      </div>
+    </div>
+
     <script src="/scripts/slideshow.js"></script>
+    <script src="/scripts/movies-catalog.js"></script>
   </body>
 </html>
