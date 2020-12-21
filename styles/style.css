@@ -1,7 +1,7 @@
 * {
-  margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -21,6 +21,7 @@ nav {
   display: flex;
   justify-content: space-around;
   font-size: 1.3em;
+  margin-left: 100px;
   text-decoration: none;
   color: black;
 }
@@ -37,7 +38,7 @@ nav {
 
 .searchBar {
   background-image: url(/images/searchIcon.png);
-  background-position: 88% 7px;
+  background-position: 96% 6px;
   background-size: 23px;
   padding: 3% 5% 3% 5%;
   box-sizing: border-box;
@@ -45,11 +46,113 @@ nav {
   border: 1px solid #ccc;
   font-size: 1.1em;
   background-repeat: no-repeat;
-  width: 10%;
+  width: 100%;
   transition: width 0.4s ease-in-out;
 }
 
+.searchBar:hover {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+}
 .searchBar:focus {
   width: 100%;
   padding: 3% 5% 3% 5%;
+}
+
+.slideshow {
+  border-radius: 20px;
+  width: 50%;
+  position: relative;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.slide {
+  border-radius: 15px;
+  padding: 0px;
+  display: none;
+  animation-name: fade;
+  animation-duration: 1.7s;
+}
+
+.slide:hover {
+  cursor: pointer;
+}
+
+.slide img {
+  border-radius: inherit;
+  height: 500px;
+}
+
+.prev,
+.next {
+  opacity: 70%;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 20px 16px;
+  color: white;
+  font-size: 1.4em;
+  background-color: darkslategray;
+  border-radius: 0 3px 3px 0;
+  transition: ease 0.4s;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next:hover {
+  border-radius: 15px 0 0 15px;
+  opacity: 95%;
+}
+.prev:hover {
+  border-radius: 0 15px 15px 0;
+  opacity: 95%;
+}
+
+.title {
+  position: absolute;
+  opacity: 70%;
+  width: 100%;
+  left: 0;
+  bottom: 4%;
+  color: white;
+  text-align: center;
+  background-color: darkslategray;
+  font-size: 1.3em;
+  padding: 20px;
+  backdrop-filter: blur(200px);
+}
+
+/* ANIMATIONS */
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1350px) {
+  .slide img {
+    height: 300px;
+  }
 }

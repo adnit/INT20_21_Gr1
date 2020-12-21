@@ -32,5 +32,25 @@
         />
       </div>
     </nav>
+
+    <div class="slideshow">
+      <div class="slide" onclick="window.location='#';">
+        <div class="title">Wonder Woman 1984</div>
+        <img src="/images/movies/ww1984.jpg" style="width: 100%" />
+      </div>
+      <div class="slide" onclick="window.location='#';">
+        <div class="title">Greenland</div>
+        <img src="/images/movies/greenland.jpg" style="width: 100%" />
+      </div>
+      <div class="slide" onclick="window.location='#';">
+        <div class="title">Tenet</div>
+        <img src="/images/movies/tenet.jpg" style="width: 100%" />
+      </div>
+
+      <a class="prev" onclick="setSlide(-1)">&#10094;</a>
+      <a class="next" onclick="setSlide(1)">&#10095;</a>
+    </div>
+
+    <script src="/scripts/slideshow.js"></script>
   </body>
 </html>
