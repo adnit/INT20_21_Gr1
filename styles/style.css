@@ -88,7 +88,8 @@ nav {
 
 .slide img {
   border-radius: inherit;
-  height: 500px;
+  height: 400px;
+  object-fit: cover;
 }
 
 .prev,
@@ -141,7 +142,136 @@ nav {
   transition: 0.3s ease;
 }
 
+.titull {
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: left;
+  justify-content: center;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+
+.movies-catalog {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#show-more {
+  display: block;
+  font-size: 1.05em;
+  float: right;
+  margin-top: 0.5%;
+  margin-right: 11.5%;
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  border: black solid 0px;
+  background-color: rgba(153, 123, 123, 0.493);
+  border-radius: 5%;
+}
+#show-more:hover {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: rgba(114, 202, 133, 0.836);
+}
+
+#more-movies1 {
+  display: none;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+#more-movies2 {
+  display: none;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+
+.movie {
+  margin: 15px;
+  float: left;
+  width: 18%;
+  border: 1px solid black;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.movie img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  bottom: 4%;
+}
+
+.info-title {
+  padding-left: 7%;
+  float: left;
+  text-align: center;
+}
+
+.rating {
+  padding-right: 7%;
+  color: brown;
+  float: right;
+}
+
+#show-less {
+  display: none;
+  font-size: 1.05em;
+  float: right;
+  margin-top: 0.5%;
+  margin-right: 11.5%;
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  border: black solid 0px;
+  background-color: rgba(153, 123, 123, 0.493);
+  border-radius: 5%;
+}
+#show-less:hover {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: rgba(114, 202, 133, 0.836);
+}
+
 /* ANIMATIONS */
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 2s;
+  animation-name: animatebottom;
+  animation-duration: 2s;
+}
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 
 @-webkit-keyframes fade {
   from {
@@ -165,8 +295,13 @@ nav {
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1150px) {
   .slide img {
-    height: 300px;
+    height: 350px;
+  }
+}
+@media (max-width: 1000px) {
+  .slide img {
+    height: 305px;
   }
 }
