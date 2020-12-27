@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: #f3fafd;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -22,7 +21,6 @@ nav {
   justify-content: space-around;
   font-size: 1.3em;
   margin-left: 100px;
-  text-decoration: none;
   color: black;
 }
 
@@ -157,25 +155,6 @@ nav {
   align-content: center;
 }
 
-#show-more {
-  display: block;
-  font-size: 1.05em;
-  float: right;
-  margin-top: 0.5%;
-  margin-right: 11.5%;
-  padding: 7px;
-  text-decoration: none;
-  color: black;
-  border: black solid 0px;
-  background-color: rgba(153, 123, 123, 0.493);
-  border-radius: 5%;
-}
-#show-more:hover {
-  cursor: pointer;
-  font-weight: 600;
-  background-color: rgba(114, 202, 133, 0.836);
-}
-
 #more-movies1 {
   display: none;
   justify-content: center;
@@ -224,7 +203,35 @@ nav {
   float: right;
 }
 
+.catalogBtn {
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0px 10px 14px -7px #74969c;
+  background: linear-gradient(to bottom, #84a2ad 5%, #91a9ad 100%);
+  background-color: #91b6c4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 1);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 13px 32px;
+  text-decoration: none;
+}
+.catalogBtn:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+}
+.catalogBtn:active {
+  position: relative;
+  top: 1px;
+}
+#show-more,
 #show-less {
+  animation-name: fade;
+  animation-duration: 2s;
   display: none;
   font-size: 1.05em;
   float: right;
@@ -233,25 +240,91 @@ nav {
   padding: 7px;
   text-decoration: none;
   color: black;
-  border: black solid 0px;
-  background-color: rgba(153, 123, 123, 0.493);
-  border-radius: 5%;
+  box-shadow: 0px 5px 10px -3px #98a6a8;
+  background-color: #bbc7cc;
+  border-radius: 8px;
 }
+
+#show-more:hover {
+  cursor: pointer;
+  box-shadow: 0px 7px 13px -3px #4f7479;
+}
+
 #show-less:hover {
   cursor: pointer;
-  font-weight: 600;
-  background-color: rgba(114, 202, 133, 0.836);
+  box-shadow: 0px 7px 13px -3px #4f7479;
+}
+
+footer {
+  margin-top: 3%;
+  padding: 5%;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background-color: #c9edfc;
+}
+
+.grid-container {
+  margin: 0 3%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 2fr 0.5fr 1fr;
+  grid-template-rows: 2fr;
+  gap: 5% 5%;
+  grid-template-areas: ". . .";
+}
+
+.footer-title {
+  display: table;
+  font-size: 1.3em;
+  margin-bottom: 3%;
+}
+
+.footer-desc {
+  margin-left: 15%;
+}
+
+.footer-desc p {
+  font-size: 1em;
+}
+
+.footer-nav {
+  margin-left: 1%;
+  font-size: 1em;
+  color: black;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: black;
+}
+.footer-nav li {
+  list-style-type: "\1F449";
+  list-style-position: inside;
+}
+.kinemja {
+  vertical-align: top;
+  background-color: black;
+}
+
+#distance-btn {
+  font-size: 1.05em;
+  margin-top: 335px;
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 5px 10px -3px #98a6a8;
+  background-color: #bbc7cc;
+  border-radius: 8px;
+}
+
+#distance-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 7px 13px -3px #4f7479;
 }
 
 /* ANIMATIONS */
 
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 2s;
-  animation-name: animatebottom;
-  animation-duration: 2s;
-}
 @-webkit-keyframes animatebottom {
   from {
     bottom: -50px;

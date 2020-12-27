@@ -1,3 +1,19 @@
+let moreMovies1 = document.getElementById("more-movies1");
+let moreMovies2 = document.getElementById("more-movies2");
+let showMoreBtn = document.getElementById("show-more");
+let showLessBtn = document.getElementById("show-less");
+let showCatalog = document.getElementsByClassName("catalogBtn");
+
+function onLoad() {
+  showMoreBtn.style.display = "flex";
+  moreMovies1.style.display = "none";
+  moreMovies2.style.display = "none";
+  showLessBtn.style.display = "none";
+  showCatalog[0].style.display = "none";
+}
+
+onLoad();
+
 function makeVisible(info) {
   info.style.visibility = "visible";
 }
@@ -12,27 +28,15 @@ function hide(elementID) {
 }
 
 function showMore() {
-  let moreMovies1 = document.getElementById("more-movies1");
-  let moreMovies2 = document.getElementById("more-movies2");
-  let showMoreBtn = document.getElementById("show-more");
-  let showLessBtn = document.getElementById("show-less");
-
   showMoreBtn.style.display = "none";
   moreMovies1.style.display = "flex";
   moreMovies2.style.display = "flex";
   showLessBtn.style.display = "flex";
-  showLessBtn.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  showCatalog[0].style.display = "flex";
+  showCatalog[0].scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function showLess() {
-  let moreMovies1 = document.getElementById("more-movies1");
-  let moreMovies2 = document.getElementById("more-movies2");
-  let showMoreBtn = document.getElementById("show-more");
-  let showLessBtn = document.getElementById("show-less");
-
-  showMoreBtn.style.display = "flex";
-  moreMovies1.style.display = "none";
-  moreMovies2.style.display = "none";
-  showLessBtn.style.display = "none";
-  showMoreBtn.scrollIntoView({ behavior: "smooth", block: "auto" });
+  onLoad();
+  // showMoreBtn.scrollIntoView({ behavior: "smooth", block: "end" });
 }
