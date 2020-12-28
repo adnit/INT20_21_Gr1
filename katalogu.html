@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/katalogu.css">
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+                <ul class="navBar">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="/catalog.html">Katalogu</a></li>
+                  <li><a href="/events.html">Evente</a></li>
+                  <li><a href="/order.html">Rezervo</a></li>
+                  <li><a href="/contact.html">Kontakto</a></li>
+                </ul>
+                <div class="searchIcon">
+                  <input
+                    class="searchBar"
+                    type="text"
+                    name="Kerko"
+                    placeholder="Kerko filmin"
+                  />
+                </div>
+                </nav>
+                <nav>
+        <div class="tab">
+                <button class="tablinks" onclick="Filmat(event, 'Aksion')">Aksion</button>
+                <button class="tablinks" onclick="Filmat(event, 'Komedi')">Komedi</button>
+                <button class="tablinks" onclick="Filmat(event, 'Romance')">Romance</button>
+                <button class="tablinks" onclick="Filmat(event, 'Triller')">Triller</button>
+              </div>
+        </nav>
+              
+              <div id="Aksion" class="tabcontent" >
+                 <div class="movies-catalog">
+                   
+                        <div
+                          class="movie"
+                          
+                          onmouseover="makeVisible(tenetinfo)"
+                          onmouseout="makeUnvisible(tenetinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/tenet.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="tenetinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          
+                          onmouseover="makeVisible(arthurinfo)"
+                          onmouseout="makeUnvisible(arthurinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/arthur & merlin.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="arthurinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          
+                          onmouseover="makeVisible(honestinfo)"
+                          onmouseout="makeUnvisible(honestinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/Honest thief.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="honestinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          
+                          onmouseover="makeVisible(wonderinfo)"
+                          onmouseout="makeUnvisible(wonderinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/ww1984.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="wonderinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                          
+                     
+                      
+
+    
+
+   
+    
+   
+     
+              
+              <div id="Komedi" class="tabcontent" class="gridcontainer">
+                <div class="movies-catalog">
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(fatmaninfo)"
+                          onmouseout="makeUnvisible(fatmaninfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/fatman.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="fatmaninfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(warinfo)"
+                          onmouseout="makeUnvisible(warinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/the war with grandpa.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="warinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(witchesinfo)"
+                          onmouseout="makeUnvisible(witchesinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/the witches.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="witchesinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(christmasinfo)"
+                          onmouseout="makeUnvisible(christmasinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/Christmas_Crossfire.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="christmasinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              
+              <div id="Romance" class="tabcontent">
+                <div class="movies-catalog">
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(happiestinfo)"
+                          onmouseout="makeUnvisible(happiestinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/happiest season.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="happiestinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(endlessinfo)"
+                          onmouseout="makeUnvisible(endlessinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/endless.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="endlessinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(princessinfo)"
+                          onmouseout="makeUnvisible(princessinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/The_Princess_Switch_Switched_Again.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="princessinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(lastinfo)"
+                          onmouseout="makeUnvisible(lastinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/last christmas.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="lastinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+              </div>
+              <div id="Triller" class="tabcontent">
+                <div class="movies-catalog">
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(wanderinfo)"
+                          onmouseout="makeUnvisible(wanderinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/wander.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="wanderinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(rentalinfo)"
+                          onmouseout="makeUnvisible(rentalinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/rental.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="rentalinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(invisibleinfo)"
+                          onmouseout="makeUnvisible(invisibleinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/invisible man.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="invisibleinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                        <div
+                          class="movie"
+                          onmouseover="makeVisible(playhouseinfo)"
+                          onmouseout="makeUnvisible(playhouseinfo)"
+                        >
+                          <a href="#">
+                            <img src="./images/movies/playhouse.jpg" alt="Movie 1" />
+                          </a>
+                          <div id="playhouseinfo" class="info">
+                            <div class="info-title">Movie Info</div>
+                            <div class="rating">4.5 &#9733;</div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+
+              <script src="./scripts/tabs.js"></script>
+              <script src="./scripts/movies-catalog.js"></script>
+              
+</body>
+</html>
