@@ -1,263 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   
 
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Online cinema catalog and ticket ordering website"
-    />
-    <title>Kino FIEK</title>
-  </head>
-  <body>
-    <!--Nav bar, searchbar-->
+<head>
 
-    <nav>
-      <ul class="navBar">
-        <li><a href="#">Home</a></li>
-        <li><a href="/catalog.html">Katalogu</a></li>
-        <li><a href="/events.html">Evente</a></li>
-        <li><a href="/order.html">Rezervo</a></li>
-        <li><a href="/contact.html">Kontakto</a></li>
-      </ul>
-      <div class="searchIcon">
-        <input
-          class="searchBar"
-          type="text"
-          name="Kerko"
-          placeholder="Kerko filmin"
-        />
-      </div>
-    </nav>
-    <!--Slideshow-->
 
-    <div class="slideshow">
-      <div class="slide" onclick="window.location='#';">
-        <div class="title">Wonder Woman 1984</div>
-        <img src="/images/movies/ww1984.jpg" style="width: 100%" />
-      </div>
-      <div class="slide" onclick="window.location='#';">
-        <div class="title">Greenland</div>
-        <img src="/images/movies/greenland.jpg" style="width: 100%" />
-      </div>
-      <div class="slide" onclick="window.location='#';">
-        <div class="title">Tenet</div>
-        <img src="/images/movies/tenet.jpg" style="width: 100%" />
-      </div>
 
-      <a class="prev" onclick="setSlide(-1)">&#10094;</a>
-      <a class="next" onclick="setSlide(1)">&#10095;</a>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Online cinema catalog and ticket ordering website" />
+  <title>Kino FIEK</title>
+</head>
+
+<body>
+  <!--Nav bar, searchbar-->
+
+  <nav>
+    <ul class="navBar">
+      <li><a href="#">Home</a></li>
+      <li><a href="/catalog.html">Katalogu</a></li>
+      <li><a href="/events.html">Evente</a></li>
+      <li><a href="/order.html">Rezervo</a></li>
+      <li><a href="/contact.html">Kontakto</a></li>
+    </ul>
+    <div class="searchIcon">
+      <input class="searchBar" type="text" name="Kerko" placeholder="Kerko filmin" />
+    </div>
+  </nav>
+  <!--Slideshow-->
+
+  <div class="slideshow">
+    <div class="slide" onclick="window.location='#';">
+      <div class="title">Wonder Woman 1984</div>
+      <img src="/images/movies/ww1984.jpg" style="width: 100%" />
+    </div>
+    <div class="slide" onclick="window.location='#';">
+      <div class="title">Greenland</div>
+      <img src="/images/movies/greenland.jpg" style="width: 100%" />
+    </div>
+    <div class="slide" onclick="window.location='#';">
+      <div class="title">Tenet</div>
+      <img src="/images/movies/tenet.jpg" style="width: 100%" />
     </div>
 
-    <div class="titull">Filmat me te shikuar kete jave</div>
+    <a class="prev" onclick="setSlide(-1)">&#10094;</a>
+    <a class="next" onclick="setSlide(1)">&#10095;</a>
+  </div>
 
-    <!--Movie Catalog-->
+  <div class="titull">Filmat me te shikuar kete jave</div>
 
-    <div class="movies-catalog">
-      <div
-        class="movie"
-        onmouseover="makeVisible(info1)"
-        onmouseout="makeUnvisible(info1)"
-      >
-        <a href="#">
-          <img src="/images/movies/tenet.jpg" alt="Movie 1" />
-        </a>
-        <div id="info1" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info2)"
-        onmouseout="makeUnvisible(info2)"
-      >
-        <a href="#">
-          <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
-        </a>
-        <div id="info2" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info3)"
-        onmouseout="makeUnvisible(info3)"
-      >
-        <a href="#">
-          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
-        </a>
-        <div id="info3" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info4)"
-        onmouseout="makeUnvisible(info4)"
-      >
-        <a href="#">
-          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
-        </a>
-        <div id="info4" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
+  <!--Movie Catalog-->
+
+  <div class="movies-catalog">
+    <div class="movie" onmouseover="makeVisible(info1)" onmouseout="makeUnvisible(info1)">
+      <a href="#">
+        <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+      </a>
+      <div id="info1" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
       </div>
     </div>
-
-    <a onclick="showMore()" id="show-more">shiko me shume...</a>
-
-    <!-- More Movies -->
-    <!-- More Movies -->
-
-    <div id="more-movies1">
-      <div
-        class="movie"
-        onmouseover="makeVisible(info5)"
-        onmouseout="makeUnvisible(info5)"
-      >
-        <a href="#">
-          <img src="/images/movies/tenet.jpg" alt="Movie 1" />
-        </a>
-        <div id="info5" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info6)"
-        onmouseout="makeUnvisible(info6)"
-      >
-        <a href="#">
-          <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
-        </a>
-        <div id="info6" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <br />
-      <div
-        class="movie"
-        onmouseover="makeVisible(info7)"
-        onmouseout="makeUnvisible(info7)"
-      >
-        <a href="#">
-          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
-        </a>
-        <div id="info7" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info8)"
-        onmouseout="makeUnvisible(info8)"
-      >
-        <a href="#">
-          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
-        </a>
-        <div id="info8" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
+    <div class="movie" onmouseover="makeVisible(info2)" onmouseout="makeUnvisible(info2)">
+      <a href="#">
+        <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+      </a>
+      <div id="info2" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
       </div>
     </div>
-    <div id="more-movies2">
-      <div
-        class="movie"
-        onmouseover="makeVisible(info9)"
-        onmouseout="makeUnvisible(info9)"
-      >
-        <a href="#">
-          <img src="/images/movies/tenet.jpg" alt="Movie 1" />
-        </a>
-        <div id="info9" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info10)"
-        onmouseout="makeUnvisible(info10)"
-      >
-        <a href="#">
-          <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
-        </a>
-        <div id="info10" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <br />
-      <div
-        class="movie"
-        onmouseover="makeVisible(info11)"
-        onmouseout="makeUnvisible(info11)"
-      >
-        <a href="#">
-          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
-        </a>
-        <div id="info11" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
-      </div>
-      <div
-        class="movie"
-        onmouseover="makeVisible(info12)"
-        onmouseout="makeUnvisible(info12)"
-      >
-        <a href="#">
-          <img src="/images/movies/greenland.jpg" alt="Movie 1" />
-        </a>
-        <div id="info12" class="info">
-          <div class="info-title">Movie Info</div>
-          <div class="rating">4.5 &#9733;</div>
-        </div>
+    <div class="movie" onmouseover="makeVisible(info3)" onmouseout="makeUnvisible(info3)">
+      <a href="#">
+        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      </a>
+      <div id="info3" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
       </div>
     </div>
-    <a onclick="showLess()" id="show-less">me pak</a>
+    <div class="movie" onmouseover="makeVisible(info4)" onmouseout="makeUnvisible(info4)">
+      <a href="#">
+        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      </a>
+      <div id="info4" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+  </div>
 
+  <a onclick="showMore()" id="show-more">shiko me shume...</a>
+
+  <!-- More Movies -->
+  <!-- More Movies -->
+
+  <div id="more-movies1">
+    <div class="movie" onmouseover="makeVisible(info5)" onmouseout="makeUnvisible(info5)">
+      <a href="#">
+        <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+      </a>
+      <div id="info5" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info6)" onmouseout="makeUnvisible(info6)">
+      <a href="#">
+        <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+      </a>
+      <div id="info6" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
     <br />
+    <div class="movie" onmouseover="makeVisible(info7)" onmouseout="makeUnvisible(info7)">
+      <a href="#">
+        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      </a>
+      <div id="info7" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info8)" onmouseout="makeUnvisible(info8)">
+      <a href="#">
+        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      </a>
+      <div id="info8" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+  </div>
+  <div id="more-movies2">
+    <div class="movie" onmouseover="makeVisible(info9)" onmouseout="makeUnvisible(info9)">
+      <a href="#">
+        <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+      </a>
+      <div id="info9" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info10)" onmouseout="makeUnvisible(info10)">
+      <a href="#">
+        <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+      </a>
+      <div id="info10" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
     <br />
+    <div class="movie" onmouseover="makeVisible(info11)" onmouseout="makeUnvisible(info11)">
+      <a href="#">
+        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      </a>
+      <div id="info11" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info12)" onmouseout="makeUnvisible(info12)">
+      <a href="#">
+        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      </a>
+      <div id="info12" class="info">
+        <div class="info-title">Movie Info</div>
+        <div class="rating">4.5 &#9733;</div>
+      </div>
+    </div>
+  </div>
+  <a onclick="showLess()" id="show-less">me pak</a>
 
-    <a href="#" class="catalogBtn">Shiko te gjithe katalogun</a>
+  <br />
+  <br />
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="grid-container">
-        <div class="footer-desc">
-          <div class="footer-title">
-            <h5>Kino Fiek</h5>
-          </div>
-          <p>
-            Kinofiek eshte website i zhvilluar me HTML5, CSS3, JavaScript ku
-            perdoruesit mund te shohin se cilet jane filmat me te shikuar te
-            javes, katalogun e kinemase, shohin evente te kinemase, rezervojn
-            bileta. <br />
-            <br />
-            <br />
-          </p>
+  <a href="#" class="catalogBtn">Shiko te gjithe katalogun</a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="grid-container">
+      <div class="footer-desc">
+        <div class="footer-title">
+          <h5>Kino Fiek</h5>
+        </div>
+        <p>
+          Kinofiek eshte website i zhvilluar me HTML5, CSS3, JavaScript ku
+          perdoruesit mund te shohin se cilet jane filmat me te shikuar te
+          javes, katalogun e kinemase, shohin evente te kinemase, rezervojn
+          bileta. <br />
+          <br />
+          <br />
+        </p>
       </div>
 
       <div class="footer-nav">
         <div class="footer-title">
-              <h5>Navigation</h5>
-            </div>
+          <h5>Navigation</h5>
+        </div>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Katalogu</a></li>
@@ -269,30 +212,34 @@
 
       <div class="cinema">
         <div class="footer-title">
-              <h5>Lokacioni</h5>
-            </div>
-            <p>Bregu i Diellit, p.n. <br>
-              10000 Prishtinë,<br>|
-              Republika e Kosovës</p>
-<br>
-  <a onclick="calculate()" id="distance-btn">Distanca</a>
+          <h5>Lokacioni</h5>
+        </div>
+        <p>Bregu i Diellit, p.n. <br>
+          10000 Prishtinë,<br>|
+          Republika e Kosovës</p>
+        <br>
+        <a onclick="calculate()" id="distance-btn">Distanca</a>
       </div>
-    </footer>
 
-    <script src="/scripts/slideshow.js"></script>
-    <script src="/scripts/movies-catalog.js"></script>
-    <script src="/scripts/location.js"></script>
-    
-<script>
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
+      <canvas id = "darkModeBtn" width="150" height="150"></canvas>
+  
+  </footer>
+  <script src="/scripts/theme.js"></script>
+  <script src="/scripts/slideshow.js"></script>
+  <script src="/scripts/movies-catalog.js"></script>
+  <script src="/scripts/location.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
         navigator.serviceWorker.register('/offline.js').then(function (registration) {
-            console.log('Service worker successfully registered on scope', registration.scope);
+          console.log('Service worker success');
         }).catch(function (error) {
-            console.log('Service worker failed to register');
+          console.log('Service worker failed');
         });
-    });
-}
-</script>
-  </body>
+      });
+    }
+  </script>
+</body>
+
 </html>
