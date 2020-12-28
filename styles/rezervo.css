@@ -1,0 +1,74 @@
+.myFrame {
+    margin-top:130px;
+    margin-left: 50px;
+    height:800px;
+    width:70%;
+    border:2px solid rgb(49, 48, 48);
+    box-shadow: 1px 4px 5px rgb(92, 90, 90);
+    background-color: rgb(241, 241, 241);
+    border-radius : 5px; 
+  }
+
+  .Hall1 {
+    margin-top: 0px;
+    margin-left: 65px;
+    height:250px;
+    width:35%;
+    border:1px solid black;
+    float: left;
+   
+
+  }
+  .Hall2 {
+    margin-top: 0px;
+    margin-right: 65px;
+    height:250px;
+    width:35%;
+    border:1px solid black;
+    float: right;
+    
+
+  }
+  .Hall3 {
+    margin-top: 100px;
+    margin-left: 65px;
+    height:250px;
+    width:35%;
+    border:1px solid black;
+    float: left;
+    
+
+  }
+  .Hall4 {
+    margin-top: 100px;
+    margin-right: 65px;
+    height:250px;
+    width:35%;
+    border:1px solid black;
+    float: right;
+    
+
+  }
+
+
+  .HallPic {
+    background-image: url('../images/sallax.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+  }
+  .container4 {
+    
+    position: relative }
+.container4 h1 {
+    margin: 0;
+    color:ivory;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+  
