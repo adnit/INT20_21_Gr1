@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/rezervo.css" />
+    <link rel="stylesheet" href="/scripts/Validation.js" />
     <meta charset="UTF-8" />
     <meta name="description" content="Online cinema catalog and ticket ordering website" />
     <title>Kino FIEK</title>
@@ -40,6 +41,11 @@
 </head>
 
 <body>
+    <div class="LoginNav">
+        <a href="#" class="button" id="sign-button">Sign In</a>
+        <a href="#" class="button" id="log-button">Log In</a>
+    </div>
+  
 
     
 
@@ -65,17 +71,54 @@
             </div>
          
        </div> 
+       
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">+</div>
+
+            <img src="../images/userIcon.png" alt="User Icon" style="width: 90px; height: 90px;border-radius: 50%;  ">
+            <div class="form-message form-message-error">Incorrect username/password combination</div>
+            <form>
+                <input type="text" placeholder=" Username">
+                <input type="password" placeholder=" Password">
+                <a href="#" class="submit-button">Submit</a>
+                <p class="form--text" style="margin-top: 30px;">
+                    <a href="#" class="form--link" id="create-button" >Don't have an account? Create account.</a>
+                </p>
+            </form>
+
+        </div>
+
     </div>
 
+    <div class="bg-modal2">
+        <div class="modal-content2"> 
+            <div class="close2">+</div>
+
+            <img src="../images/userIcon.png" alt="User Icon" style="width: 90px; height: 90px;border-radius: 50%; ">
+           
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Lastname">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder=" Username">
+                <input type="password" placeholder=" Password">
+                <a href="#" class="submit-button">Submit</a>
+            </form>
+
+        </div>
 
     </div>
-
+  
 
 
     <div class="myFrame">
 
 
     </div>
+    
+
+    <script src="scripts/Validation.js"></script>
 
 
     <footer>
