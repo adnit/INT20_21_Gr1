@@ -1,6 +1,6 @@
 let distanceBtn = document.getElementById("distance-btn");
-const fiekLatitude = 42.6498194;
-const fiekLongitude = 21.1656237;
+localStorage.setItem("fiekLat", "42.6498194");
+localStorage.setItem("fiekLong", "21.1656237");
 
 function calculate() {
   navigator.permissions.query({ name: "geolocation" }).then(function (result) {
@@ -20,8 +20,8 @@ function setPosition(position) {
   let distance = getDistanceFromLatLonInKm(
     userLatitude,
     userLongitude,
-    fiekLatitude,
-    fiekLongitude
+    localStorage.getItem("fiekLat") + 0,
+    localStorage.getItem("fiekLong") + 0
   );
   distanceBtn.innerHTML = distance + " km";
 }

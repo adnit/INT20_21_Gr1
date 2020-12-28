@@ -1,3 +1,42 @@
+.dark-mode {
+  --text-color: rgb(255, 255, 255);
+  --body-bg: #121212;
+  --search-bg: #1d1c1c;
+  --footer-bg: #111111;
+  --sld-btn: #2f4f4f;
+  --sld-tittle: #fff;
+  --btn-color: #bbc7cc;
+  --btn-color-hover: #408c99;
+  --shadow-color: #98a6a8;
+  --shadow-color-hover: #4f7479;
+  --catbtn-c1: #84a2ad;
+  --catbtn-c2: #91a9ad;
+  --catbtn-c1-hover: #84a2ad;
+  --catbtn-c2-hover: #91a9ad;
+}
+:root {
+  --text-color: rgb(0, 0, 0);
+  --body-bg: #edfdff;
+  --footer-bg: #c9edfc;
+  --sld-btn: #2f4f4f;
+  --sld-tittle: #fff;
+  --btn-color: #bbc7cc;
+  --btn-color-hover: #7d9296;
+  --shadow-color: #add3d8;
+  --shadow-color-hover: #687a7c;
+  --catbtn-c1: #84a2ad;
+  --catbtn-c2: #91a9ad;
+  --catbtn-c1-hover: #84a2ad;
+  --catbtn-c2-hover: #91a9ad;
+}
+
+#darkModeBtn {
+  z-index: 40;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -6,6 +45,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--body-bg);
+  transition: background 1s;
 }
 
 nav {
@@ -21,7 +62,7 @@ nav {
   justify-content: space-around;
   font-size: 1.3em;
   margin-left: 100px;
-  color: black;
+  color: var(--text-color);
 }
 
 .navBar li {
@@ -31,14 +72,16 @@ nav {
 
 .navBar a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
 .searchBar {
   background-image: url(/images/searchIcon.png);
+  color: var(--text-color);
   background-position: 96% 6px;
   background-size: 23px;
   padding: 3% 5% 3% 5%;
+  background-color: var(--search-bg);
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -55,6 +98,7 @@ nav {
 .searchBar:focus {
   width: 100%;
   padding: 3% 5% 3% 5%;
+  border: 1px solid #d6d6d6;
 }
 
 .slideshow {
@@ -76,6 +120,7 @@ nav {
   border-radius: 15px;
   padding: 0px;
   display: none;
+
   animation-name: fade;
   animation-duration: 1.7s;
 }
@@ -86,6 +131,7 @@ nav {
 
 .slide img {
   border-radius: inherit;
+  box-shadow: 0px 5px 14px -3px var(--shadow-color);
   height: 400px;
   object-fit: cover;
 }
@@ -98,9 +144,9 @@ nav {
   top: 45%;
   width: auto;
   padding: 20px 16px;
-  color: white;
+  color: var(--sld-tittle);
   font-size: 1.4em;
-  background-color: darkslategray;
+  background-color: var(--sld-btn);
   border-radius: 0 3px 3px 0;
   transition: ease 0.4s;
 }
@@ -125,9 +171,9 @@ nav {
   width: 100%;
   left: 0;
   bottom: 4%;
-  color: white;
+  color: var(--sld-tittle);
   text-align: center;
-  background-color: darkslategray;
+  background-color: var(--sld-btn);
   font-size: 1.3em;
   padding: 20px;
   backdrop-filter: blur(200px);
@@ -141,6 +187,7 @@ nav {
 }
 
 .titull {
+  color: var(--text-color);
   font-size: 1.6em;
   font-weight: 600;
   text-align: left;
@@ -177,15 +224,24 @@ nav {
 }
 
 .movie img {
+  transition: transform 0.2s;
+  border-radius: 5px;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 0px 2px 7px -3px var(--shadow-color);
+}
+
+.movie img:hover {
+  box-shadow: 0px 2px 11px -3px var(--shadow-color);
+  transform: scale(1.05);
 }
 
 .info {
+  color: var(--text-color);
   font-size: 1em;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--text-color);
   backdrop-filter: blur(10px);
   visibility: hidden;
   bottom: 4%;
@@ -199,30 +255,39 @@ nav {
 
 .rating {
   padding-right: 7%;
-  color: brown;
+  color: var(--text-color);
   float: right;
 }
 
 .catalogBtn {
   margin: auto;
   margin-top: 10px;
-  box-shadow: 0px 10px 14px -7px #74969c;
-  background: linear-gradient(to bottom, #84a2ad 5%, #91a9ad 100%);
-  background-color: #91b6c4;
+  box-shadow: 0px 5px 14px -7px var(--shadow-color);
+  background: linear-gradient(
+    to bottom,
+    var(--catbtn-c1) 5%,
+    var(--catbtn-c2) 100%
+  );
+  background-color: var(--btn-color);
   border-radius: 8px;
   display: flex;
   align-items: center;
   width: fit-content;
   cursor: pointer;
-  color: rgba(0, 0, 0, 1);
-  font-size: 12px;
+  color: black;
+  font-size: 13px;
   font-weight: 600;
-  padding: 13px 32px;
+  padding: 12px 30px;
   text-decoration: none;
 }
 .catalogBtn:hover {
-  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-  background-color: #408c99;
+  background: linear-gradient(
+    to bottom,
+    var(--catbtn-c1-hover) 5%,
+    var(--catbtn-c2-hover) 100%
+  );
+  box-shadow: 0px 7px 13px -3px #4f7479;
+  background-color: var(--btn-color-hover);
 }
 .catalogBtn:active {
   position: relative;
@@ -240,28 +305,29 @@ nav {
   padding: 7px;
   text-decoration: none;
   color: black;
-  box-shadow: 0px 5px 10px -3px #98a6a8;
-  background-color: #bbc7cc;
+  box-shadow: 0px 4px 10px -3px var(--shadow-color);
+  background-color: var(--btn-color);
   border-radius: 8px;
 }
 
 #show-more:hover {
   cursor: pointer;
-  box-shadow: 0px 7px 13px -3px #4f7479;
+  box-shadow: 0px 5px 13px -3px var(--shadow-color-hover);
 }
 
 #show-less:hover {
   cursor: pointer;
-  box-shadow: 0px 7px 13px -3px #4f7479;
+  box-shadow: 0px 5px 13px -3px var(--shadow-color-hover);
 }
 
 footer {
+  color: var(--text-color);
   margin-top: 3%;
   padding: 5%;
   display: inline-flex;
   align-items: center;
   width: 100%;
-  background-color: #c9edfc;
+  background-color: var(--footer-bg);
 }
 
 .grid-container {
@@ -291,12 +357,12 @@ footer {
 .footer-nav {
   margin-left: 1%;
   font-size: 1em;
-  color: black;
+  color: var(--text-color);
 }
 
 .footer-nav a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 .footer-nav li {
   list-style-type: "\1F449";
@@ -304,7 +370,7 @@ footer {
 }
 .kinemja {
   vertical-align: top;
-  background-color: black;
+  background-color: var(--text-color);
 }
 
 #distance-btn {
@@ -313,14 +379,14 @@ footer {
   padding: 7px;
   text-decoration: none;
   color: black;
-  box-shadow: 0px 5px 10px -3px #98a6a8;
+  box-shadow: 0px 3px 10px -3px var(--shadow-color);
   background-color: #bbc7cc;
   border-radius: 8px;
 }
 
 #distance-btn:hover {
   cursor: pointer;
-  box-shadow: 0px 7px 13px -3px #4f7479;
+  box-shadow: 0px 5px 13px -3px var(--shadow-color-hover);
 }
 
 /* ANIMATIONS */
