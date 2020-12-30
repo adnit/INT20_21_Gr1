@@ -218,7 +218,8 @@ nav {
 .movie {
   margin: 15px;
   float: left;
-  width: 18%;
+  width: 20%;
+  height: 210px;
   border: 1px solid black;
   border-radius: 5px 5px 5px 5px;
 }
