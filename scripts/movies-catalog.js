@@ -40,3 +40,9 @@ function showLess() {
   onLoad();
   // showMoreBtn.scrollIntoView({ behavior: "smooth", block: "end" });
 }
+
+function setMovieID(id) {
+  console.log(id);
+  localStorage.setItem("movieid", id);
+  window.location.href = "/movie.html";
+}
