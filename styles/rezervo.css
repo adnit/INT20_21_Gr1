@@ -50,6 +50,50 @@
     
 
   }
+  
+  .hall-view {
+    margin-top: 20px;
+    margin-left: 45px;
+    height:320px;
+    width:50%;
+    border:1px solid black;
+    border-radius: 4px;
+    position: relative;
+    float: left;
+  }
+  .hall1-img {
+    background-image: url('../images/hall1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+  }
+  .hall2-img {
+    background-image: url('../images/hall2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+  }
+  .hall3-img {
+    background-image: url('../images/hall3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+  }
+  .hall4-img {
+    background-image: url('../images/hall4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+  }
+
 
 
   .HallPic {
@@ -63,6 +107,7 @@
   .container4 {
     
     position: relative }
+
 .container4 h1 {
     margin: 0;
     color:ivory;
@@ -72,7 +117,7 @@
     margin-right: -50%;
     transform: translate(-50%, -50%) }
 
-    .LoginNav {
+    .Login {
       margin-left: 5px;
       margin-top: 1px;
     
@@ -98,25 +143,7 @@
       color: rgb(255, 255, 255);
     }
   
-    .popup {
-      background: rgba(0, 0,0, 0.6);
-      width:100%;
-      height:100%;
-      position:absolute;
-       top: 0;
-       display :flex;
-       justify-content: center;
-       align-items: center;
-    }
-
-    .popup-content{
-      height:250px;
-      width:500px;
-      background: white;
-      padding:20px;
-      border-radius: 5px;
-      position: relative;
-    }
+  
 
     input{
       width:50%;
@@ -142,17 +169,106 @@
       transform: rotate(45deg);
       cursor: pointer;
     }
+    .closehall1 {
+      font-size: 55px;
+      position:absolute;
+      top:0;
+      right:14px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+    .closehall2 {
+      font-size: 55px;
+      position:absolute;
+      top:0;
+      right:14px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+    .closehall3 {
+      font-size: 55px;
+      position:absolute;
+      top:0;
+      right:14px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+    .closehall4 {
+      font-size: 55px;
+      position:absolute;
+      top:0;
+      right:14px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
 
     .bg-modal{
       width:100%;
       height:100%;
-      background-color:rgba(0, 0,0, 0.6);     
+      background-color:rgba(0, 0,0, 0.6);       
       position:absolute;
       top:0;
       display: none;
       justify-content: center;
       align-items: center;
         }
+        
+        .hall1-modal{
+          width:100%;
+      height:100%;
+      background-color:rgba(0, 0,0, 0.6);       
+      position:absolute;
+      top:0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+ }
+ .hall2-modal{
+  width:100%;
+height:100%;
+background-color:rgba(0, 0,0, 0.6);       
+position:absolute;
+top:0;
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+.hall3-modal{
+  width:100%;
+height:100%;
+background-color:rgba(0, 0,0, 0.6);       
+position:absolute;
+top:0;
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+.hall4-modal{
+  width:100%;
+height:100%;
+background-color:rgba(0, 0,0, 0.6);       
+position:absolute;
+top:0;
+display: none;
+justify-content: center;
+align-items: center;
+}
+ 
+
+        .hall-content{
+          width:950px;
+          height:700px;
+          background-color: rgb(255, 253, 253);
+          border-radius: 5px;
+          text-align: center;
+          padding:10px;
+          position: relative;
+          }
+
+
+
 
 
         .bg-modal2{
@@ -221,3 +337,17 @@
 
     }
     
+    .specifics{
+     margin-top:0px;
+     
+
+    }
+    .specifics h2 {
+      padding:20px;
+    }
+
+    .specifics  li{
+     padding:10px;
+      font-size: 20px;
+     display:block;
+    }
