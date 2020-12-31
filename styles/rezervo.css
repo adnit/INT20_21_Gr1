@@ -53,7 +53,7 @@
   
   .hall-view {
     margin-top: 20px;
-    margin-left: 45px;
+    margin-left: 30px;
     height:320px;
     width:50%;
     border:1px solid black;
@@ -125,7 +125,7 @@
     }
 
     .button{
-      background-color: rgb(253, 250, 224);
+      background-color: rgb(250, 250, 249);
       border:2px rgb(77, 76, 76);
       padding:5px 10px;
       text-align: center;
@@ -149,7 +149,7 @@
       width:50%;
       height:40px;
       display: block;
-      margin: 20px auto;
+      margin:auto;
       padding:10px;
     }
 
@@ -294,13 +294,14 @@ align-items: center;
     }
     .modal-content2{
       width:600px;
-      height:500px;
+      height:600px;
       background-color: rgb(255, 253, 253);
       border-radius: 5px;
       text-align: center;
       padding:10px;
       position: relative;
     }
+    
 
     .submit-button{
       
@@ -339,15 +340,77 @@ align-items: center;
     
     .specifics{
      margin-top:0px;
+     text-align: left;
      
 
     }
     .specifics h2 {
       padding:20px;
+      text-align: center;
     }
 
     .specifics  li{
      padding:10px;
+     padding-left: 500px;
       font-size: 20px;
      display:block;
+     margin-left: 10px;
+
     }
+
+    .rezervimi{
+      margin-top: 30px;
+      width:100%;
+      height: 35%;
+      display: block;
+    }
+
+    .rezervo{
+      width:100%;
+      height:35px;
+    }
+
+    .rezervo-head{
+      float:right;
+      font-size: 25px;
+      padding-right: 300px;
+    }
+    .rezervo-orar{
+      float:left;
+      font-size: 25px;
+      padding-left: 30px;
+    }
+
+    
+
+    .rezervimi input{
+      float:left;
+       width:15%;
+       margin-left: 25px;
+      height:40px;
+      padding:10px;
+    }
+
+    #error {
+      color:red;
+    }
+
+    #error2{
+      color: red;
+    }
+
+    #hall1{
+      border:1px solid black;
+    }
+
+    .orari-rezervo{
+      width:100%;
+      height:100%;
+    }
+
+    .orari{
+      width:50%;
+      height:100%;
+    }
+
+ 

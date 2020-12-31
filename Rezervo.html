@@ -6,7 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/rezervo.css" />
-    <link rel="stylesheet" href="/scripts/Validation.js" />
+    <link rel="stylesheet" href="/scripts/validationforms.js" />
+    <link rel="stylesheet" href="/scripts/confirmation.js" />
     <meta charset="UTF-8" />
     <meta name="description" content="Online cinema catalog and ticket ordering website" />
     <title>Kino FIEK</title>
@@ -42,7 +43,7 @@
 
 <body>
     <div class="LoginNav">
-        <a href="#" class="button" id="sign-button">Sign In</a>
+        <a href="#" class="button" id="sign-button">Sign Up</a>
         <a href="#" class="button" id="log-button">Log In</a>
     </div>
   
@@ -55,35 +56,40 @@
     <div class="myFrame">
         
 
-            <div class="Hall1 HallPic container4"  onclick="location.href='#';" style="cursor:pointer;" id="hall1" >
-              <h1>Salla 1</h1>
-            </div> 
+        <div class="Hall1 HallPic container4"  onclick="location.href='#';" style="cursor:pointer;" id="hall1" >
+              <h1>Salla 1</h1> 
+        </div>  
              
-            <div class="Hall2 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall2">
+        <div class="Hall2 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall2">
              <h1>Salla 2</h1>
-            </div>
+        </div>
              
-            <div class="Hall3 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall3">
+        <div class="Hall3 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall3">
                 <h1>Salla 3</h1>
-            </div>
-            <div class="Hall4 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall4">
+        </div>
+        <div class="Hall4 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall4">
                 <h1>Salla 4</h1>
-            </div>
+        </div>
          
-       </div> 
+    </div> 
        
     <div class="bg-modal">
         <div class="modal-content">
             <div class="close">+</div>
 
             <img src="../images/userIcon.png" alt="User Icon" style="width: 90px; height: 90px;border-radius: 50%;  ">
-            <div class="form-message form-message-error">Incorrect username/password combination</div>
+            <div id="error2"></div>
             <form>
-                <input type="text" placeholder=" Username">
-                <input type="password" placeholder=" Password">
-                <a href="#" class="submit-button">Submit</a>
+               
+                <label>Username :</label>
+                <input type="text" id="log-username" placeholder=" Username">
+                <label>Password : </label>
+                <input type="password" id="log-password" placeholder=" Password"><br>
+                
+            
+            <a href="#" class="submit-button" id="log-submit">Submit</a>
                 <p class="form--text" style="margin-top: 30px;">
-                    <a href="#" class="form--link" id="create-button" >Don't have an account? Create account.</a>
+                    <a href="#" id="create-button"  >Don't have an account? Create account.</a>
                 </p>
             </form>
 
@@ -98,12 +104,22 @@
             <img src="../images/userIcon.png" alt="User Icon" style="width: 90px; height: 90px;border-radius: 50%; ">
            
             <form>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Lastname">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder=" Username">
-                <input type="password" placeholder=" Password">
-                <a href="#" class="submit-button">Submit</a>
+                <div id="error"></div>
+                <label>Emri : </label>
+                <input type="text" id="emri" placeholder="Name">
+                <label>Mbiemri : </label>
+                <input type="text" id="mbiemri" placeholder="Lastname">
+                <label>Email : </label>
+                <input type="email" id="email" placeholder="Email">
+                <label>Username : </label>
+                <input type="text" id="username" placeholder=" Username">
+                <label>Password : </label>
+                <input type="password" id="password" placeholder=" Password">
+                <label>Confirm password : </label>
+                <input type="password" id="password2" placeholder=" Confirm Password"><br><br>
+                
+                
+               <a href="#" class="submit-button" id="sign-submit">Submit</a>
             </form>
 
         </div>
@@ -126,7 +142,21 @@
                     <li>Formati i shfaqjes: 2D.</li>
                 </ul>
             </div>
-        </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>    
+                <div class="orari-rezervo">
+                <div class="orari"> </div>
+                
+
+                </div>
+
+             </div>
+            
+             
+              </div>
  
     </div>
 
@@ -146,6 +176,20 @@
                     <li>Formati i shfaqjes: 2D.</li>
                 </ul>
             </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>
+                <div class="orari-rezervo">
+                    <div class="orari"> </div>
+                    
+    
+                    
+    
+                 </div>
+                
+             </div>
 
         </div>
  
@@ -168,6 +212,20 @@
                     <li>Formati i shfaqjes: 2D dhe 3D.</li>
                 </ul>
             </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>
+                <div class="orari-rezervo">
+                    <div class="orari"> </div>
+                    
+    
+                    
+    
+                 </div>
+                
+             </div>
 
         </div>
  
@@ -190,6 +248,20 @@
                     <li>Formati i shfaqjes: 2D dhe 3D.</li>
                 </ul>
             </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>
+                <div class="orari-rezervo">
+                    <div class="orari"> </div>
+                    
+    
+                    
+    
+                 </div>
+                
+             </div>
 
         </div>
  
@@ -206,7 +278,10 @@
     </div>
     
 
-    <script src="scripts/Validation.js"></script>
+    
+    <script src="scripts/validationforms.js"></script>
+    <script src="scripts/confirmation.js"></script>
+
 
 
     <footer>

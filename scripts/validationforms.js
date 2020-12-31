@@ -11,7 +11,7 @@ document.querySelector('.close').addEventListener('click',function(){
 });
 
 
-// signin modal
+// signup modal
 document.getElementById('sign-button').addEventListener('click',function(){
 
     document.querySelector('.bg-modal2').style.display = 'flex';
@@ -81,3 +81,4 @@ document.querySelector('.closehall4').addEventListener('click',function(){
      document.querySelector('.hall4-modal').style.display='none';
 
 });
+
