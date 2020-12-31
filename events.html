@@ -22,10 +22,22 @@
     <h2>Evente</h2>
     <hr>
     <div class="verticalTab">
-      <button class="vtlink" onclick="hapEventin(event, 'dkino')" id="current">Dita e kinemase</button>
+      <button class="vtlink" onclick="hapEventin(event, 'oraret')" id="current">Oraret e eventeve</button>
+      <button class="vtlink" onclick="hapEventin(event, 'dkino')">Dita e kinemase</button>
       <button class="vtlink" onclick="hapEventin(event, 'ffund')">Festat e fundvitit</button>
       <button class="vtlink" onclick="hapEventin(event, 'ddashuri')">Dita e te dashuruarve</button>
       <button class="vtlink" onclick="hapEventin(event, 'hallo')">Halloween</button>
+      <button class="vtlink" onclick="hapEventin(event, 'foto1')">Dergoni fotot tuaja</button>
+    </div>
+    <div id="oraret" class="tabcontent">
+      <h3>Oraret e eventeve</h3>
+      <ul class="oraret">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
     <div id="dkino" class="tabcontent">
       <h3 class="dita">Dita e kinemase</h3>
@@ -55,9 +67,39 @@
       <a class="hallo" href="./katalogu.html">Filmat</a>
       </div>
     </div>
+    <div id="foto1" class="tabcontent">
+    <h3 class="tfoto">Keni marre pjese ne eventet e kaluara? <Br>
+      Beni upload fotot qe keni bere per t'i kujtuar, ju bashke me ne!</h3>
+    
+    <div id="foto" class="popup">
+        <form id="forma1" class="formcontainer">
+
+        <label for="emri">Emri:</label> <br>
+        <input type="text" id="emri" name="emri"> <br>
+
+        <label for="mbiemri">Mbiemri:</label> <br>
+        <input type="text" id="mbiemri" name="mbiemri"> <br>
+
+        <label for="eventi1">Eventi:</label> <br>
+        <input type="text" id="eventi1" name="eventi1"> <br>
+
+        <label for="data">Data:</label><br>
+        <input type="date" id="data" name="data1"> <br>
+
+        <label for="files">Beni upload fotot:</label> <br>
+        <input type="file" id="files" name="fotot" multiple> <br>
+
+        <button type="submit" class="btn">Upload</button> <br>
+
+        <button type="button" class="cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    <button id="ob" class="open-button" onclick="openForm()">Beni upload</button>
+  </div>
       
     <script src="./scripts/events.js">      
-      hapEventin(event, "dkino");   
+      hapEventin(event, "oraret");   
+      closeForm();
     </script>
      
   </body>
