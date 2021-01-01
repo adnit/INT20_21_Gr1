@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/rezervo.css" />
     <link rel="stylesheet" href="/scripts/validationforms.js" />
     <link rel="stylesheet" href="/scripts/confirmation.js" />
+    <link rel="stylesheet" href="/scripts/location.js" />
     <meta charset="UTF-8" />
     <meta name="description" content="Online cinema catalog and ticket ordering website" />
     <title>Kino FIEK</title>
@@ -148,7 +149,47 @@
                     <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
                 </div>    
                 <div class="orari-rezervo">
-                <div class="orari"> </div>
+                   
+                <div class="orari"> 
+                    <table>
+                        <tr>
+                            <th>Koha</th>
+                            <th>Filmi</th>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td>Mulan (2020 film)</td>
+                        </tr>
+                        <tr>
+                            <td>16:00</td>
+                            <td>Wonder Woman 1984</td>
+                        </tr>
+                        <tr>
+                            <td>21:00</td>
+                            <td>Tenet (2020 film)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="rezervimet">
+                  <form>
+                       <div  id="error-s1"></div>
+                      <input type="text" placeholder=" Username" id="s1user">
+                      <input type="password" placeholder=" Password" id="s1pass">
+                      <input type="number" placeholder="Numri i biletave" min="1" max="120" id="s1nr">
+                      <input type="number" placeholder="Rreshti" min="1" max="12">
+                      <input list="filmat" placeholder="Filmi" id="s1film">
+                      <datalist id="filmat">
+                        <option>Mulan (2020 film)</option>
+                        <option>Wonder Woman 1984</option>
+                        <option>Tenet (2020 film)</option>
+                      </datalist>
+                      <input type="text" placeholder="Nr. Xhirollogarise" id="s1bank" >
+                     
+                     
+                  </form>
+                  <a href="#" class="submit-button" id="submit-s1">Submit</a>
+                </div>
+               
                 
 
                 </div>
@@ -182,8 +223,46 @@
                     <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
                 </div>
                 <div class="orari-rezervo">
-                    <div class="orari"> </div>
-                    
+                    <div class="orari"> 
+                        <table>
+                            <tr>
+                                <th>Koha</th>
+                                <th>Filmi</th>
+                            </tr>
+                            <tr>
+                                <td>11:00</td>
+                                <td>Greenland (2020 film)</td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                <td>Wonder woman 1984</td>
+                            </tr>
+                            <tr>
+                                <td>19:00</td>
+                                <td>Arthur & Merlin (2015 film)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="rezervimet">
+                        <form>
+                            <div  id="error-s2"></div>
+                            <input type="text" placeholder=" Username" id="s2user">
+                            <input type="password" placeholder=" Password" id="s2pass">
+                            <input type="number" placeholder="Numri i biletave" min="1" max="100" id="s2nr">
+                            <input type="number" placeholder="Rreshti" min="1" max="10" >
+                            <input list="filmat2" placeholder="Filmi" id="s2film">
+                            <datalist id="filmat2">
+                                
+                              <option>Wonder woman 1984</option>
+                              <option>Arthur & Merlin (2015 film)</option>
+                              <option>Greenland (2020 film)</option>
+                            </datalist>
+                            <input type="text" placeholder="Nr. Xhirollogarise" id="s2bank" >
+                           
+                           
+                        </form>
+                        <a href="#" class="submit-button"  id="submit-s2">Submit</a>
+                      </div>
     
                     
     
@@ -218,8 +297,45 @@
                     <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
                 </div>
                 <div class="orari-rezervo">
-                    <div class="orari"> </div>
-                    
+                    <div class="orari">
+                        <table>
+                            <tr>
+                                <th>Koha</th>
+                                <th>Filmi</th>
+                            </tr>
+                            <tr>
+                                <td>13:45</td>
+                                <td>Fatman (2020 film)</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>Last Christmas</td>
+                            </tr>
+                            <tr>
+                                <td>21:30</td>
+                                <td>Possesor (2020 film)</td>
+                            </tr>
+                        </table>    
+                    </div>
+                    <div class="rezervimet">
+                        <form>
+                            <div  id="error-s3"></div>
+                            <input type="text" placeholder=" Username" id="s3user">
+                            <input type="password" placeholder=" Password" id="s3pass">
+                            <input type="number" placeholder="Numri i biletave" min="1" max="140" id="s3nr">
+                            <input type="number" placeholder="Rreshti" min="1" max="12">
+                            <input list="filmat3" placeholder="Filmi" id="s3film">
+                            <datalist id="filmat3">
+                              <option>Fatman (2020 film)</option>
+                              <option>Last Christmas</option>
+                              <option>Possessor (2020 film)</option>
+                            </datalist>
+                            <input type="text" placeholder="Nr. Xhirollogarise" id="s3bank">
+                           
+                           
+                        </form>
+                        <a href="#" class="submit-button"  id="submit-s3">Submit</a>
+                      </div>
     
                     
     
@@ -254,8 +370,41 @@
                     <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
                 </div>
                 <div class="orari-rezervo">
-                    <div class="orari"> </div>
-                    
+                    <div class="orari"> 
+                        <table>
+                            <tr>
+                                <th>Koha</th>
+                                <th>Filmi</th>
+                            </tr>
+                            <tr>
+                                <td>15:00</td>
+                                <td>Scoob! 3D (2020 film)</td>
+                            </tr>
+                            <tr>
+                                <td>19:00</td>
+                                <td>Bloodshot (2020 film) </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class="rezervimet">
+                        <form>
+                            <div  id="error-s4"></div>
+                            <input type="text" placeholder=" Username" id="s4user">
+                            <input type="password" placeholder=" Password" id="s4pass">
+                            <input type="number" placeholder="Numri i biletave" min="1" max="150" id="s4nr">
+                            <input type="number" placeholder="Rreshti" min="1" max="13">
+                            <input list="filmat4" placeholder="Filmi" id="s4film">
+                            <datalist id="filmat4">
+                              <option>Bloodshot (2020 film)</option>
+                              <option>Scoob! 3D (2020 film)</option>
+                            </datalist>
+                            <input type="text" placeholder="Nr. Xhirollogarise" id="s4bank" >
+                           
+                           
+                        </form>
+                        <a href="#" class="submit-button"  id="submit-s4">Submit</a>
+                      </div>
     
                     
     
@@ -281,7 +430,7 @@
     
     <script src="scripts/validationforms.js"></script>
     <script src="scripts/confirmation.js"></script>
-
+    <script src="scripts/location.js"></script>
 
 
     <footer>

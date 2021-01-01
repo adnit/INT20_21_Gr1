@@ -53,7 +53,7 @@
   
   .hall-view {
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 15px;
     height:320px;
     width:50%;
     border:1px solid black;
@@ -399,6 +399,19 @@ align-items: center;
       color: red;
     }
 
+    #error-s1{
+      color:red;
+    }
+    #error-s2{
+      color:red;
+    }
+    #error-s3{
+      color:red;
+    }
+    #error-s4{
+      color:red;
+    }
+
     #hall1{
       border:1px solid black;
     }
@@ -406,11 +419,44 @@ align-items: center;
     .orari-rezervo{
       width:100%;
       height:100%;
+      overflow: hidden;
     }
 
     .orari{
-      width:50%;
+
+      width:40%;
       height:100%;
+      float:left;
     }
 
- 
+    .orari th, td{
+      padding:15px;
+      border:1px solid black;
+    }
+
+    .orari table{
+      margin-left: 15px;
+      width:100%;
+      border:2px solid black;
+    }
+
+
+    .rezervimet{
+      margin-top: 10px;
+     
+      float:right;
+      width: 55%;
+      height:100%;
+      position: relative;
+      display:block;
+    }
+
+    .rezervimet input{
+      width:120px;
+      height:40px;
+      display: block;
+      padding:10px;
+      margin-block:10px;
+      margin-bottom: 20px;
+    }
+   
