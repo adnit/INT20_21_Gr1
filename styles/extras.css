@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Product Sans"),
+    url("/files/ProductSans-Regular.woff") format("woff");
+}
+
+body {
+  font-family: "Product Sans", sans-serif;
+  background-color: var(--body-bg);
+  transition: background 1s;
+}
+
+nav {
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+  margin-left: 100px;
+  color: var(--text-color);
+}
+
+.navBar li {
+  list-style-type: none;
+  margin-left: 10%;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.searchBar {
+  background-image: url(/images/searchIcon.png);
+  color: var(--text-color);
+  background-position: 96% 6px;
+  background-size: 23px;
+  padding: 3% 5% 3% 5%;
+  background-color: var(--search-bg);
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+  background-repeat: no-repeat;
+  width: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchBar:hover {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+}
+.searchBar:focus {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+  border: 1px solid #d6d6d6;
+}
+a {
+  padding: 3%;
+  font-size: 1.2em;
+}
+
+a:visited {
+  color: black;
+}
+a:hover {
+  color: rgb(82, 152, 153);
+}
+
+#emri {
+  color: red;
+}

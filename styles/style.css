@@ -30,6 +30,14 @@
   --catbtn-c2-hover: #91a9ad;
 }
 
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Product Sans"),
+    url("/files/ProductSans-Regular.woff") format("woff");
+}
+
 #darkModeBtn {
   z-index: 40;
   position: fixed;
