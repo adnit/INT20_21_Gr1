@@ -14,12 +14,16 @@ let trailerTitle = document.getElementById("trailer-title");
 let term = "";
 
 function generateDetails() {
-  let movieID = localStorage.getItem("movieid");
-  getMovieDetails(movieID);
-  setTimeout(function () {}, 500);
+  getMovieDetails(checkURL());
   movieDetailsScreen.style.visibility = "visible";
   trailerBlock.style.visibility = "visible";
   loadingScreen.style.display = "none";
+}
+
+function checkURL() {
+  let url = window.location.href;
+  let movieID = url.substring(url.indexOf("?") + 1, url.length);
+  return movieID;
 }
 
 function getMovieDetails(movieID) {
@@ -31,6 +35,7 @@ function getMovieDetails(movieID) {
         console.error(movieData.Error);
         return;
       }
+      document.title = movieData.Title;
       $(poster).attr("src", movieData.Poster);
       $(title).html(movieData.Title);
       term = movieData.Title;
