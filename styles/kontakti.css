@@ -183,7 +183,7 @@ transform: translateY(0);
     position: relative;
     padding: 15px;
     border: 2px solid black;
-    background-color: cyan;
+    
     margin: 35px;
     
 }
@@ -200,7 +200,7 @@ transform: translateY(0);
     text-align: center;
     justify-content: center;
     border: 2px solid black;
-    background-color: lime;
+    
     
 }
 .tedhenat{
