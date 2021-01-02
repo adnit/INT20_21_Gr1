@@ -44,5 +44,5 @@ function showLess() {
 function setMovieID(id) {
   console.log(id);
   localStorage.setItem("movieid", id);
-  window.location.href = "/movie.html";
+  window.location.href = "/movie.html?" + id;
 }
