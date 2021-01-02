@@ -23,3 +23,11 @@ function setSlide(n) {
 function setCurrentSlide(n) {
   showSlide((slidePos = n));
 }
+
+let loader = document.getElementById("loader");
+
+setInterval(() => {
+  setSlide(1);
+  loader.style.display = "none";
+  loader.style.display = "block";
+}, 7000);

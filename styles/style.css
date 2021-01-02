@@ -157,6 +157,7 @@ nav {
   background-color: var(--sld-btn);
   border-radius: 0 3px 3px 0;
   transition: ease 0.4s;
+  z-index: 30;
 }
 
 .next {
@@ -172,13 +173,30 @@ nav {
   border-radius: 0 15px 15px 0;
   opacity: 95%;
 }
+.loader {
+  background-color: darkslategray;
+  height: 5px;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  animation: animate 7s linear infinite alternate;
+}
+
+@keyframes animate {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
 
 .title {
   position: absolute;
   opacity: 70%;
   width: 100%;
   left: 0;
-  bottom: 4%;
+  bottom: 6%;
   color: var(--sld-tittle);
   text-align: center;
   background-color: var(--sld-btn);
