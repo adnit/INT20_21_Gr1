@@ -1,129 +1,219 @@
 * {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-  }
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color:lightgray;
+  transition: background 3s;
+}
 .movie {
-    margin: 15px;
-    float: left;
-    width: 100%;
-    height: 210px;
-    
-    border: 1px solid black;
-    border-radius: 5px 5px 5px 5px;
-  }
-  .movie img {
-    transition: transform 0.2s;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0px 2px 7px -3px var(--shadow-color);
-  }
-  .movie img:hover {
-    box-shadow: 0px 2px 11px -3px var(--shadow-color);
-    transform: scale(1.05);
-  }
-  .movies-catalog {
-    display: grid;
-    grid-template-columns: repeat(4, 23%);
-    grid-template-rows: auto;
-    grid-gap: 50px 20px;
-    justify-content: center;
-    align-content: center;
-  }
-  .searchBar {
-    background-image: url(/images/searchIcon.png);
-    color: var(--text-color);
-    background-position: 96% 6px;
-    background-size: 23px;
-    padding: 3% 5% 3% 5%;
-    background-color: var(--search-bg);
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 1.1em;
-    background-repeat: no-repeat;
-    width: 100%;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  .searchBar:hover {
-    width: 100%;
-    padding: 3% 5% 3% 5%;
-  }
-  .searchBar:focus {
-    width: 100%;
-    padding: 3% 5% 3% 5%;
-    border: 1px solid #d6d6d6;
-  }
-  
+  margin: 15px;
+  float: left;
+  width: 100%;
+  height: 170px;
+  border: 1px solid black;
+  border-radius: 5px 5px 5px 5px;
+}
+.movie img {
+  transition: transform 0.2s;
+  border-radius: 5px;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0px 2px 7px -3px var(--shadow-color);
+}
+.movie img:hover {
+  box-shadow: 0px 2px 11px -3px var(--shadow-color);
+  transform: scale(1.05);
+}
+.movies-catalog {
+  margin: 0 5.6%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  grid-template-rows: auto;
+  grid-gap: 50px 20px;
+  justify-content: center;
+  align-content: center;
+}
+.searchBar {
+  background-image: url(/images/searchIcon.png);
+  color: var(--text-color);
+  background-position: 96% 6px;
+  background-size: 23px;
+  padding: 3% 5% 3% 5%;
+  background-color: var(--search-bg);
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+  background-repeat: no-repeat;
+  width: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchBar:hover {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+}
+.searchBar:focus {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+  border: 1px solid #d6d6d6;
+}
+
 nav {
-    padding-top: 2%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-  }
-  
-  .navBar {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.3em;
-    margin-left: 100px;
-    color: var(--text-color);
-  }
-  
-  .navBar li {
-    list-style-type: none;
-    margin-left: 10%;
-  }
-  
-  .navBar a {
-    text-decoration: none;
-    color: var(--text-color);
-  }
-  .tab {
-	overflow: hidden;
-	border: 1px solid #ccc;
-	background-color: #f1f1f1;
-	width: 58%;
-	
-  }
-  
- 
-  .tab button {
-	background-color: inherit;
-	float: left;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	width: auto;
-	text-align: center;
-	padding: 14px 16px;
-	transition: 0.3s;
-	font-size: 17px;
-  }
-  
-  
-  .tab button:hover {
-	background-color: #ddd;
-  }
-  
-  
-  .tab button.active {
-	background-color: #ccc;
-  }
-  
-  
-  .tabcontent {
-	display: none;
-	padding: 18px 12px;
-	width: 100%;
-	height: 450%;
-	border: 1px solid #ccc;
-	border-top: none;
-  }
- 
- 
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+  margin-left: 100px;
+  color: var(--text-color);
+}
+
+.navBar li {
+  list-style-type: none;
+  margin-left: 10%;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: auto;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: auto;
+  text-align: center;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 18px 12px;
+  width: 100%;
+  height: 450%;
+
+  border-top: none;
+}
+
+footer {
+  color: var(--text-color);
+  margin-top: 3%;
+  padding: 5%;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--footer-bg);
+}
+
+.grid-container {
+  margin: 0 3%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 2fr 0.5fr 1fr;
+  grid-template-rows: 2fr;
+  gap: 5% 5%;
+  grid-template-areas: ". . .";
+}
+
+.footer-title {
+  display: table;
+  font-size: 1.3em;
+  margin-bottom: 3%;
+}
+
+.footer-desc {
+  margin-left: 15%;
+}
+
+.footer-desc p {
+  font-size: 1em;
+}
+
+.footer-nav {
+  margin-left: 1%;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.footer-nav li {
+  list-style-type: "\1F449";
+  list-style-position: inside;
+}
+.kinemja {
+  vertical-align: top;
+  background-color: var(--text-color);
+}
+
+#distance-btn {
+  font-size: 1.05em;
+  margin-top: 335px;
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 3px 10px -3px var(--shadow-color);
+  background-color: #bbc7cc;
+  border-radius: 8px;
+}
+
+#distance-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 13px -3px var(--shadow-color-hover);
+}
+
+.info {
+  color: var(--text-color);
+  font-size: 1em;
+  background-color: var(--text-color);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  bottom: 4%;
+}
+
+.info-title {
+  padding-left: 7%;
+  float: left;
+  text-align: center;
+}
+
+.rating {
+  padding-right: 7%;
+  color: var(--text-color);
+  float: right;
+}

@@ -28,20 +28,7 @@ function onLoad() {
   }
 }
  
+
+
+
 onLoad();
-
-function makeVisible(info) {
-  info.style.visibility = "visible";
-}
-function makeUnvisible(info) {
-  info.style.visibility = "hidden";
-}
-
-
-
-
-function setMovieID(id) {
-  console.log(id);
-  localStorage.setItem("movieid", id);
-  window.location.href = "/movie.html";
-}
