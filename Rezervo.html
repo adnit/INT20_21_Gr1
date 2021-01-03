@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/rezervo.css" />
+    <link rel="stylesheet" href="/scripts/validationforms.js" />
+    <link rel="stylesheet" href="/scripts/confirmation.js" />
+    <link rel="stylesheet" href="/scripts/location.js" />
+    <link rel="stylesheet" href="/scripts/drop&drag.js" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Online cinema catalog and ticket ordering website" />
+    <title>Kino FIEK</title>
+    <style>
+        body {
+     
+            background-image: url('../images/movies/p_mulan2020_20204_b005decc.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right;
+            /* height: 100vh;
+            width: 30%;
+            margin-left: 70%; */
+            box-shadow: inset 1100px 50px 50px #fff;
+        }
+        
+    </style>
+
+    <nav>
+        <ul class="navBar">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/catalog.html">Katalogu</a></li>
+            <li><a href="/events.html">Evente</a></li>
+            <li><a href="/rezervo.html">Rezervo</a></li>
+            <li><a href="/contact.html">Kontakto</a></li>
+        </ul>
+        <div class="searchIcon">
+            <input class="searchBar" type="text" name="Kerko" placeholder="Kerko filmin" />
+        </div>
+    </nav>
+
+</head>
+
+<body>
+    <div class="LoginNav"> 
+        <a href="#" class="button" id="sign-button">Sign Up</a>
+        <a href="#" class="button" id="log-button">Log In</a>
+    </div>
+  
+
+    
+
+    <div style="width: 80%; float: left; height: 200px;">
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="../images/ribbon.png" alt="cinema ribbon image" style="width: 85%; height:100px; margin-left: 50px;"
+         draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+
+    </div>
+    
+    <div class="myFrame">
+        
+
+        <div class="Hall1 HallPic container4"  onclick="location.href='#';" style="cursor:pointer;" id="hall1" >
+              <h1>Salla 1</h1> 
+        </div>  
+             
+        <div class="Hall2 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall2">
+             <h1>Salla 2</h1>
+        </div>
+             
+        <div class="Hall3 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall3">
+                <h1>Salla 3</h1>
+        </div>
+        <div class="Hall4 HallPic container4" onclick="location.href='#';" style="cursor:pointer;" id="hall4">
+                <h1>Salla 4</h1>
+        </div>
+         
+    </div> 
+       
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">+</div>
+
+            <img src="../images/userIcon.png" alt="User Icon" style="width: 90px; height: 90px;border-radius: 50%;  ">
+            <div id="error2"></div>
+            <form>
+               
+                <label>Username :</label>
+                <input type="text" id="log-username" placeholder=" Username">
+                <label>Password : </label>
+                <input type="password" id="log-password" placeholder=" Password"><br>
+                
+            
+            <a href="#" class="submit-button" id="log-submit">Submit</a>
+                <p class="form--text" style="margin-top: 30px;">
+                    <a href="#" id="create-button"  >Don't have an account? Create account.</a>
+                </p>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="bg-modal2">
+        <div class="modal-content2"> 
+            <div class="close2">+</div>
+
+            <img src="../images/userIcon.png" alt="User Icon" style="width: 90px; height: 90px;border-radius: 50%; ">
+           
+            <form>
+                <div id="error"></div>
+                <label>Emri : </label>
+                <input type="text" id="emri" placeholder="Name">
+                <label>Mbiemri : </label>
+                <input type="text" id="mbiemri" placeholder="Lastname">
+                <label>Email : </label>
+                <input type="email" id="email" placeholder="Email">
+                <label>Username : </label>
+                <input type="text" id="username" placeholder=" Username">
+                <label>Password : </label>
+                <input type="password" id="password" placeholder=" Password">
+                <label>Confirm password : </label>
+                <input type="password" id="password2" placeholder=" Confirm Password"><br><br>
+                
+                
+               <a href="#" class="submit-button" id="sign-submit">Submit</a>
+            </form>
+
+        </div>
+
+    </div>
+  
+    <div class="hall1-modal">
+        <div class="hall-content">
+            <h1>Salla 1</h1>
+            <div class="closehall1">+</div>
+            <div class="hall-view hall1-img"></div>
+            <div class="specifics"> 
+                <h2>Specifikat e salles</h2>
+                <ul>
+                    <li>Kapaciteti: 120 ulese.</li>
+                    <li>Madhesia Ekranit: 140inch.</li>
+                    <li>Lokacioni : Kati 1. </li>
+                    <li>Qmimi i biletes:  5$.</li>
+                    <li>Numri i filmave: 3-5 ne dite.</li>
+                    <li>Formati i shfaqjes: 2D.</li>
+                </ul>
+            </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>    
+                <div class="orari-rezervo">
+                   
+                <div class="orari"> 
+                    <table>
+                        <tr>
+                            <th>Koha</th>
+                            <th>Filmi</th>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td >Mulan (2020 film)</td>
+                        </tr>
+                        <tr style="background-color: rgb(235, 193, 235);">
+                            <td>16:00</td>
+                            <td>Wonder Woman 1984</td>
+                        </tr>
+                        <tr>
+                            <td>21:00</td>
+                            <td>Tenet (2020 film)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="rezervimet">
+                  <form>
+                       <div  id="error-s1"></div>
+                      <input type="text" placeholder=" Username" id="s1user">
+                      <input type="password" placeholder=" Password" id="s1pass">
+                      <input type="number" placeholder="Numri i biletave" min="1" max="120" id="s1nr">
+                      <input type="number" placeholder="Rreshti" min="1" max="12">
+                      <input list="filmat" placeholder="Filmi" id="s1film">
+                      <datalist id="filmat">
+                        <option>Mulan (2020 film)</option>
+                        <option>Wonder Woman 1984</option>
+                        <option>Tenet (2020 film)</option>
+                      </datalist>
+                      <input type="text" placeholder="Nr. Xhirollogarise" id="s1bank" >
+                     
+                     
+                  </form>
+                  <a href="#" class="submit-button" id="submit-s1">Submit</a>
+                </div>
+               
+                
+
+                </div>
+
+             </div>
+            
+             
+              </div>
+ 
+    </div>
+
+    <div class="hall2-modal">
+        <div class="hall-content">
+            <h1>Salla 2</h1>
+            <div class="closehall2">+</div>
+            <div class="hall-view hall2-img"></div>
+            <div class="specifics"> 
+                <h2>Specifikat e salles</h2>
+                <ul>
+                    <li>Kapaciteti: 100 ulese.</li>
+                    <li>Madhesia Ekranit: 140inch.</li>
+                    <li>Lokacioni : Kati 1. </li>
+                    <li>Qmimi i biletes:  5$.</li>
+                    <li>Numri i filmave: 3-4 ne dite.</li>
+                    <li>Formati i shfaqjes: 2D.</li>
+                </ul>
+            </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>
+                <div class="orari-rezervo">
+                    <div class="orari"> 
+                        <table>
+                            <tr>
+                                <th>Koha</th>
+                                <th>Filmi</th>
+                            </tr>
+                            <tr>
+                                <td>11:00</td>
+                                <td>Greenland (2020 film)</td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                <td>Wonder woman 1984</td>
+                            </tr>
+                            <tr>
+                                <td>19:00</td>
+                                <td>Arthur & Merlin (2015 film)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="rezervimet">
+                        <form>
+                            <div  id="error-s2"></div>
+                            <input type="text" placeholder=" Username" id="s2user">
+                            <input type="password" placeholder=" Password" id="s2pass">
+                            <input type="number" placeholder="Numri i biletave" min="1" max="100" id="s2nr">
+                            <input type="number" placeholder="Rreshti" min="1" max="10" >
+                            <input list="filmat2" placeholder="Filmi" id="s2film">
+                            <datalist id="filmat2">
+                                
+                              <option>Wonder woman 1984</option>
+                              <option>Arthur & Merlin (2015 film)</option>
+                              <option>Greenland (2020 film)</option>
+                            </datalist>
+                            <input type="text" placeholder="Nr. Xhirollogarise" id="s2bank" >
+                           
+                           
+                        </form>
+                        <a href="#" class="submit-button"  id="submit-s2">Submit</a>
+                      </div>
+    
+                    
+    
+                 </div>
+                
+             </div>
+
+        </div>
+ 
+    </div>
+
+
+    <div class="hall3-modal">
+        <div class="hall-content">
+            <h1>Salla 3</h1>
+            <div class="closehall3">+</div>
+            <div class="hall-view hall3-img"></div>
+            <div class="specifics"> 
+                <h2>Specifikat e salles</h2>
+                <ul>
+                    <li>Kapaciteti: 140 ulese.</li>
+                    <li>Madhesia Ekranit: 155inch.</li>
+                    <li>Lokacioni : Kati 2. </li>
+                    <li>Qmimi i biletes:  8$.</li>
+                    <li>Numri i filmave: 3-4 ne dite.</li>
+                    <li>Formati i shfaqjes: 2D dhe 3D.</li>
+                </ul>
+            </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>
+                <div class="orari-rezervo">
+                    <div class="orari">
+                        <table>
+                            <tr>
+                                <th>Koha</th>
+                                <th>Filmi</th>
+                            </tr>
+                            <tr>
+                                <td>13:45</td>
+                                <td>Fatman (2020 film)</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>Last Christmas</td>
+                            </tr>
+                            <tr>
+                                <td>21:30</td>
+                                <td>Possessor (2020 film)</td>
+                            </tr>
+                        </table>    
+                    </div>
+                    <div class="rezervimet">
+                        <form>
+                            <div  id="error-s3"></div>
+                            <input type="text" placeholder=" Username" id="s3user">
+                            <input type="password" placeholder=" Password" id="s3pass">
+                            <input type="number" placeholder="Numri i biletave" min="1" max="140" id="s3nr">
+                            <input type="number" placeholder="Rreshti" min="1" max="12">
+                            <input list="filmat3" placeholder="Filmi" id="s3film">
+                            <datalist id="filmat3">
+                              <option>Fatman (2020 film)</option>
+                              <option>Last Christmas</option>
+                              <option>Possessor (2020 film)</option>
+                            </datalist>
+                            <input type="text" placeholder="Nr. Xhirollogarise" id="s3bank">
+                           
+                           
+                        </form>
+                        <a href="#" class="submit-button"  id="submit-s3">Submit</a>
+                      </div>
+    
+                    
+    
+                 </div>
+                
+             </div>
+
+        </div>
+ 
+    </div>
+
+
+    <div class="hall4-modal">
+        <div class="hall-content">
+            <h1>Salla 4</h1>
+            <div class="closehall4">+</div>
+            <div class="hall-view hall4-img"></div>
+            <div class="specifics"> 
+                <h2>Specifikat e salles</h2>
+                <ul>
+                    <li>Kapaciteti: 150 ulese.</li>
+                    <li>Madhesia Ekranit: 160inch.</li>
+                    <li>Lokacioni : Kati 3. </li>
+                    <li>Qmimi i biletes:  7$.</li>
+                    <li>Numri i filmave: 2-3 ne dite.</li>
+                    <li>Formati i shfaqjes: 2D dhe 3D.</li>
+                </ul>
+            </div>
+            <div class="rezervimi">
+                <div class="rezervo"> 
+                    <div class="rezervo-orar"><b>Orari : </b></div>
+                    <div class="rezervo-head"> <b>Rezervo bileten :</b></div>
+                </div>
+                <div class="orari-rezervo">
+                    <div class="orari"> 
+                        <table>
+                            <tr>
+                                <th>Koha</th>
+                                <th>Filmi</th>
+                            </tr>
+                            <tr>
+                                <td>15:00</td>
+                                <td>Scoob! 3D (2020 film)</td>
+                            </tr>
+                            <tr>
+                                <td>19:00</td>
+                                <td>Bloodshot (2020 film) </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class="rezervimet">
+                        <form>
+                            <div  id="error-s4"></div>
+                            <input type="text" placeholder=" Username" id="s4user">
+                            <input type="password" placeholder=" Password" id="s4pass">
+                            <input type="number" placeholder="Numri i biletave" min="1" max="150" id="s4nr">
+                            <input type="number" placeholder="Rreshti" min="1" max="13">
+                            <input list="filmat4" placeholder="Filmi" id="s4film">
+                            <datalist id="filmat4">
+                              <option>Bloodshot (2020 film)</option>
+                              <option>Scoob! 3D (2020 film)</option>
+                            </datalist>
+                            <input type="text" placeholder="Nr. Xhirollogarise" id="s4bank" >
+                           
+                           
+                        </form>
+                        <a href="#" class="submit-button"  id="submit-s4">Submit</a>
+                      </div>
+    
+                    
+    
+                 </div>
+                
+             </div>
+
+        </div>
+ 
+    </div>
+
+
+
+    
+
+
+    <div class="myFrame">
+        <div class="menu-head" >
+            <h1>KINOFIEK SNACKS</h1> 
+        </div>
+        <div class="menu food">
+            <div class="food1">
+                <h2>Snacks</h2>
+                <ul>
+                    <li>Popcorns
+                        <ul style="padding-left: 20px;">
+                        <li>Mini Bucket <b style="color:white">........1$</b></li>
+                        <li>Medium Bucket <b style="color:white">....1,5$</b></li>
+                        <li>Large Bucket <b style="color:white">.......2$</b></li>
+                        </ul>
+                        </li>
+                        <li>Nachos
+                            <ul style="padding-left: 20px;">
+                                <li>Beef Nachos <b style="color:white">........3$</b></li>
+                                <li>Cheese Nachos <b style="color:white">......4$</b></li>
+                                <li>Pepper Nachos <b style="color:white">......4$</b></li>
+                            </ul>
+                        </li>
+                    <li>Chocolates
+                        <ul style="padding-left: 20px;">
+                            <li>Snickers  <b style="color:white">...........2$</b></li>
+                            <li>Bounty <b style="color:white">.............2$</b></li>
+                        </ul>
+                    </li>
+                    <li>Potato Wedges 
+                        <ul style="padding-left: 20px;">
+                            <li>Min Bucket <b style="color:white">.........2$</b></li>
+                            <li>Large Bucket <b style="color:white">.......4$</b></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="food2">
+                <h2>Drinks</h2>
+                <ul>
+                    <li>Hot Beverages
+                        <ul  style="padding-left: 20px;">
+                            <li>Coffee <b style="color:white">..................2$</b></li>
+                            <li>Chocolate Milk <b style="color:white">..........3$</b></li>
+                            <li>Cafe Latte <b style="color:white">..............3$</b></li>
+                        </ul>
+                    </li>
+                    <li>Cold Beverages
+                        <ul  style="padding-left: 20px;">
+                            <li>Water 0.5L <b style="color:white">............1,5$</b></li>
+                            <li>Mineral Water 0.5L <b style="color:white">....1,5$</b></li>
+                            <li>Coca cola 0.33L <b style="color:white">.........3$</b></li>
+                            <li>Fanta 0.33L <b style="color:white">.............3$</b></li>
+                            <li>Sprite 0.33L <b style="color:white">............3$</b></li>
+                            <li>Redbull 0.25L <b style="color:white">...........5$</b></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="media-info">
+        <p>Rezervimet e biletave mund t'i bëni edhe përmes aplikacionit  <b>Kino FIEK</b>  i cili tani mund të shkarkohet në Play Store dhe në App Store </p><br>
+        <p>Për të rejat e fundit rreth kinemase sonë na ndiqni në Facebook,  <i>Kino FIEK Kosova</i></p>
+    </div>
+
+
+    <svg width="180" height="110">
+        <rect x="50" y="20" rx="5" ry="5" width="80" height="80"
+        style="fill:blue;opacity:0.7" />
+         <text fill="white" font-size="90"  font-family="Verdana"  x="85" y="99.6">f</text>
+      Sorry, your browser does not support inline SVG.
+      </svg>
+
+      
+
+
+      <svg width="100" height="100" >
+        <defs>
+           <clippath id="myCircle">
+              <circle cx="50" cy="50" r="40" />
+           </clippath>
+        </defs>
+        <image width="100%" height="100%" xlink:href="/images/kino-logo.jpg" clip-path="url(#myCircle) " stroke="green" stroke-width="4" fill="yellow" />
+     </svg>
+      
+    
+
+    
+    <script src="scripts/validationforms.js"></script>
+    <script src="scripts/confirmation.js"></script>
+    <script src="scripts/location.js"></script>
+    <script src="scripts/drop&drag.js"></script>
+
+    <footer>
+        <div class="grid-container">
+            <div class="footer-desc">
+                <div class="footer-title">
+                    <h5>Kino Fiek</h5>
+                </div>
+                <p>
+                    Kinofiek eshte website i zhvilluar me HTML5, CSS3, JavaScript ku
+                    perdoruesit mund te shohin se cilet jane filmat me te shikuar te
+                    javes, katalogun e kinemase, shohin evente te kinemase, rezervojn
+                    bileta. <br />
+                    <br />
+                    <br />
+                </p>
+            </div>
+    
+            <div class="footer-nav">
+                <div class="footer-title">
+                    <h5>Navigation</h5>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Katalogu</a></li>
+                    <li><a href="#">Evente</a></li>
+                    <li><a href="#">Rezervo</a></li>
+                    <li><a href="#">Kontakto</a></li>
+                </ul>
+            </div>
+    
+            <div class="cinema">
+                <div class="footer-title">
+                    <h5>Lokacioni</h5>
+                </div>
+                <p>Bregu i Diellit, p.n. <br>
+                    10000 Prishtinë,<br>|
+                    Republika e Kosovës</p>
+                <br>
+                <a onclick="calculate()" id="distance-btn">Distanca</a>
+            </div>
+            </div>
+    </footer>
+</body>
+
+</html>
