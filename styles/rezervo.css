@@ -124,6 +124,10 @@
       border:0px solid black;
     }
 
+    .LoginNav{
+      margin-top:10px;
+    }
+
     .button{
       background-color: rgb(250, 250, 249);
       border:2px rgb(77, 76, 76);
@@ -431,24 +435,42 @@ align-items: center;
 
     .orari th, td{
       padding:15px;
-      border:1px solid black;
+      font-size:17px;
+      font-weight: bold;
+    }
+    .orari th{
+      background-color: rgb(29, 32, 32);
+      color:white;
+      background-color: rgb(153, 50, 204);
+    }
+    .orari tr{
+      border:1px solid rgb(88, 88, 88);
+      background-color: rgb(241, 216, 245);
+    
+
     }
 
     .orari table{
       margin-left: 15px;
       width:100%;
-      border:2px solid black;
+      
+      border:2px solid rgb(41, 41, 41);
+      border-collapse: collapse;
+      border-radius: 5px;
+      height:95%;
     }
 
 
     .rezervimet{
-      margin-top: 10px;
+      margin-top: 0px;
      
       float:right;
       width: 55%;
-      height:100%;
+      height:95%;
       position: relative;
       display:block;
+      border:2px solid black;   
+      background-color:rgb(241, 216, 245);
     }
 
     .rezervimet input{
@@ -460,3 +482,52 @@ align-items: center;
       margin-bottom: 20px;
     }
    
+
+    .menu-head{
+      width:100%;
+      height:100px;
+      font-size: 35px;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: left;
+      padding: 15px;
+      color: gold;
+      background-color: rgb(224, 34, 34);
+      border-bottom: 1px solid rgb(245, 202, 202);
+    }
+    
+    .menu{
+      width: 100%;
+      height: 87.5%;
+      background-image: url('../images/snacks.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      -moz-box-shadow:    inset  0 -350px 90px -10px rgb(252, 33, 33);
+      -webkit-box-shadow: inset  0 -350px 90px -10px rgb(252, 33, 33);
+      box-shadow:        inset  0  -350px 90px -10px rgb(252, 33, 33);
+    }
+
+    .food{
+      padding: 20px;
+      font-size: 25px;
+      color:rgb(255, 217, 0);
+      font-weight: bolder;
+      
+      padding-top: 240px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .food ul {
+      padding-left: 70px;
+      list-style-type:disc;
+    }
+
+    .food1{
+      float: left;
+      width:50%;
+    }
+
+    .food2{
+      padding-top: 80px;
+      float:right;
+      width:50%;
+    }

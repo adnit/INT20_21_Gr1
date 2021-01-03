@@ -86,8 +86,8 @@ forms1.addEventListener('click',(s1) => {
     messages1.push('Username must be 5 characters long ');}
     else if(passwords1.value.length < 5){
       messages1.push('Password must be 5 characters long ');
-    }else if(nrbiletaves1.value>0 || nrbiletaves1.value<120){
-      messages2.push('Jep numer valid te biletave.');
+    }else if(nrbiletaves1.value <= 0 || nrbiletaves1.value > 120){
+      messages1.push('Jep numer valid te biletave.');
     }else {
       messages1.push('Rezervimi u be me sukses.');
     }if(messages1.length > 0){
@@ -115,7 +115,7 @@ forms2.addEventListener('click',(s2) => {
     messages2.push('Username must be 5 characters long ');}
     else if(passwords2.value.length < 5){
       messages2.push('Password must be 5 characters long ');
-    }else if(nrbiletaves2.value > 0 || nrbiletaves2.value < 100){
+    }else if(nrbiletaves2.value <= 0 || nrbiletaves2.value > 100){
       messages2.push('Jep numer valid te biletave.');
     }else {
       messages2.push('Rezervimi u be me sukses.');
@@ -145,7 +145,7 @@ forms3.addEventListener('click',(s3) => {
     messages3.push('Username must be 5 characters long ');}
     else if(passwords3.value.length < 5){
       messages3.push('Password must be 5 characters long ');
-    }else if(nrbiletaves3.value > 0 || nrbiletaves3.value <= 140){
+    }else if(nrbiletaves3.value <= 0 || nrbiletaves3.value > 140){
       messages3.push('Jep numer valid te biletave.');
     }else {
       messages3.push('Rezervimi u be me sukses.');
@@ -173,7 +173,7 @@ forms4.addEventListener('click',(s4) => {
     messages4.push('Username must be 5 characters long ');}
     else if(passwords4.value.length < 5){
       messages4.push('Password must be 5 characters long ');
-    }else if(nrbiletaves4.value > 0 || nrbiletaves4.value <= 150){
+    }else if(nrbiletaves4.value <= 0 || nrbiletaves4.value > 150){
       messages4.push('Jep numer valid te biletave.');
     }else {
       messages4.push('Rezervimi u be me sukses.');
