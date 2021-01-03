@@ -3,10 +3,12 @@
 document.getElementById('log-button').addEventListener('click',function(){
 
     document.querySelector('.bg-modal').style.display = 'flex';
+    disableScroll(true);
 });
 
 document.querySelector('.close').addEventListener('click',function(){
      document.querySelector('.bg-modal').style.display='none';
+     disableScroll(false);
 
 });
 
@@ -15,10 +17,12 @@ document.querySelector('.close').addEventListener('click',function(){
 document.getElementById('sign-button').addEventListener('click',function(){
 
     document.querySelector('.bg-modal2').style.display = 'flex';
+    disableScroll(true);
 });
 
 document.querySelector('.close2').addEventListener('click',function(){
      document.querySelector('.bg-modal2').style.display='none';
+     disableScroll(false);
 
 });
 
@@ -28,10 +32,12 @@ document.getElementById('create-button').addEventListener('click',function(){
 
     document.querySelector('.bg-modal2').style.display = 'flex';
     document.querySelector('.bg-modal').style.display = 'none';
+    disableScroll(true);
 });
 
 document.querySelector('.close2').addEventListener('click',function(){
      document.querySelector('.bg-modal2').style.display='none';
+     disableScroll(false);
 
 });
 
@@ -39,10 +45,12 @@ document.querySelector('.close2').addEventListener('click',function(){
 document.getElementById('hall1').addEventListener('click',function(){
 
     document.querySelector('.hall1-modal').style.display = 'flex';
+    disableScroll(true);
 });
 
 document.querySelector('.closehall1').addEventListener('click',function(){
      document.querySelector('.hall1-modal').style.display='none';
+     disableScroll(false);
 
 });
 
@@ -51,10 +59,12 @@ document.querySelector('.closehall1').addEventListener('click',function(){
 document.getElementById('hall2').addEventListener('click',function(){
 
     document.querySelector('.hall2-modal').style.display = 'flex';
+    disableScroll(true);
 });
 
 document.querySelector('.closehall2').addEventListener('click',function(){
      document.querySelector('.hall2-modal').style.display='none';
+     disableScroll(false);
 
 });
 
@@ -63,22 +73,33 @@ document.querySelector('.closehall2').addEventListener('click',function(){
 document.getElementById('hall3').addEventListener('click',function(){
 
     document.querySelector('.hall3-modal').style.display = 'flex';
+    disableScroll(true);
 });
 
 document.querySelector('.closehall3').addEventListener('click',function(){
      document.querySelector('.hall3-modal').style.display='none';
+     disableScroll(false);
 
 });
 
 
 //hall4 modal
 document.getElementById('hall4').addEventListener('click',function(){
-
     document.querySelector('.hall4-modal').style.display = 'flex';
+    disableScroll(true);
 });
 
 document.querySelector('.closehall4').addEventListener('click',function(){
      document.querySelector('.hall4-modal').style.display='none';
-
+     disableScroll(false);
 });
+
+
+function disableScroll(add){
+    if (add == true){
+        document.body.className += " stop-scrolling";
+    } else {
+        document.body.className = "";
+    }
+}
 

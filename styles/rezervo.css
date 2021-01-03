@@ -453,7 +453,7 @@ align-items: center;
     .orari table{
       margin-left: 15px;
       width:100%;
-      
+      border-spacing: 0px;
       border:2px solid rgb(41, 41, 41);
       border-collapse: collapse;
       border-radius: 5px;
@@ -531,3 +531,32 @@ align-items: center;
       float:right;
       width:50%;
     }
+
+    .stop-scrolling {
+      height: 100%;
+      overflow: hidden;
+    }
+
+
+   .media-info{
+     padding:50px;
+     padding-bottom: 20px;
+     font-size: 17px;
+   }
+
+   #myCircle {
+     border:10px solid black;
+     border-radius: 50%;
+   }
+
+   #div1{
+    width:40%;
+     float:left;
+     height: 100%;
+   }
+
+   #div2{
+    width:40%;
+     float:left;
+     height: 100%;
+   }

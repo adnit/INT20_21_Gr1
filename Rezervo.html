@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/scripts/validationforms.js" />
     <link rel="stylesheet" href="/scripts/confirmation.js" />
     <link rel="stylesheet" href="/scripts/location.js" />
+    <link rel="stylesheet" href="/scripts/drop&drag.js" />
     <meta charset="UTF-8" />
     <meta name="description" content="Online cinema catalog and ticket ordering website" />
     <title>Kino FIEK</title>
@@ -52,7 +53,14 @@
     
 
     <div style="width: 80%; float: left; height: 200px;">
-        <img src="../images/ribbon.png" alt="cinema ribbon image" style="width: 35%; height:100px; margin-left: 50px;">
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="../images/ribbon.png" alt="cinema ribbon image" style="width: 85%; height:100px; margin-left: 50px;"
+         draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+
     </div>
     
     <div class="myFrame">
@@ -485,13 +493,39 @@
         </div>
 
     </div>
+
+    <div class="media-info">
+        <p>Rezervimet e biletave mund t'i bëni edhe përmes aplikacionit  <b>Kino FIEK</b>  i cili tani mund të shkarkohet në Play Store dhe në App Store </p><br>
+        <p>Për të rejat e fundit rreth kinemase sonë na ndiqni në Facebook,  <i>Kino FIEK Kosova</i></p>
+    </div>
+
+
+    <svg width="180" height="110">
+        <rect x="50" y="20" rx="5" ry="5" width="80" height="80"
+        style="fill:blue;opacity:0.7" />
+         <text fill="white" font-size="90"  font-family="Verdana"  x="85" y="99.6">f</text>
+      Sorry, your browser does not support inline SVG.
+      </svg>
+
+      
+
+
+      <svg width="100" height="100" >
+        <defs>
+           <clippath id="myCircle">
+              <circle cx="50" cy="50" r="40" />
+           </clippath>
+        </defs>
+        <image width="100%" height="100%" xlink:href="/images/kino-logo.jpg" clip-path="url(#myCircle) " stroke="green" stroke-width="4" fill="yellow" />
+     </svg>
+      
     
 
     
     <script src="scripts/validationforms.js"></script>
     <script src="scripts/confirmation.js"></script>
     <script src="scripts/location.js"></script>
-
+    <script src="scripts/drop&drag.js"></script>
 
     <footer>
         <div class="grid-container">
