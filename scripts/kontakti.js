@@ -1,4 +1,4 @@
- const inputs = document.querySelectorAll(".input");
+const inputs = document.querySelectorAll(".input");
  function focusF(){
      let parent = this.parentNode;
      parent.classList.add("focus");
