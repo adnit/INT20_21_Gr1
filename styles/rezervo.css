@@ -517,13 +517,13 @@ align-items: center;
       font-family: 'Courier New', Courier, monospace;
     }
     .food ul {
-      padding-left: 70px;
+      padding-left: 30px;
       list-style-type:disc;
     }
 
     .food1{
       float: left;
-      width:40%;
+      width:45%;
     }
 
     .food2{
