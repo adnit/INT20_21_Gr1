@@ -14,3 +14,13 @@ document.getElementById(emriEventit).style.display = "block";
   event.currentTarget.className += " active";
 }
 document.getElementById("current").click();
+
+function openForm() {
+  document.getElementById("foto").style.display = "block";
+  document.getElementById("ob").style.display = "none";
+}
+
+function closeForm() {
+  document.getElementById("foto").style.display = "none";
+  document.getElementById("ob").style.display = "block";
+}
