@@ -1,8 +1,10 @@
 let slidePos = 1;
+var loader = document.getElementById('slideloader');
+
 showSlide(slidePos);
 
 function showSlide(n) {
-  let slides = document.getElementsByClassName("slide");
+  let slides = document.getElementsByClassName('slide');
   let i;
   if (n < 1) {
     slidePos = slides.length;
@@ -11,9 +13,9 @@ function showSlide(n) {
     slidePos = 1;
   }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
-  slides[slidePos - 1].style.display = "block";
+  slides[slidePos - 1].style.display = 'block';
 }
 
 function setSlide(n) {
@@ -24,10 +26,6 @@ function setCurrentSlide(n) {
   showSlide((slidePos = n));
 }
 
-let loader = document.getElementById("loader");
-
 setInterval(() => {
   setSlide(1);
-  loader.style.display = "none";
-  loader.style.display = "block";
 }, 7000);

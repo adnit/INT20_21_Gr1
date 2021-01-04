@@ -15,7 +15,7 @@
   </head>
   <body>
     <!--Nav bar, searchbar-->
-
+<div id="pseudo-body">
     <nav>
       <ul class="navBar">
         <li><a href="#">Home</a></li>
@@ -36,11 +36,66 @@
     <div id="informatat">
       <h1>Llogoja e <span id="emri"> KinoFiek</span></h1>
       <a
+        id="llogo"
         style="text-decoration: none"
         href="/files/KinoFiek.pdf"
         target="_blank"
         >Kliko ketu</a
       >
     </div>
+    <div id="informatat">
+      <h1 id="fiek">FIEK</span></h1>
+      <img
+        id="fiekimg"
+        width="300px"
+        height="200px"
+        style="object-fit: cover;"
+        src="/files/fiek.jpg"
+        /img>
+
+    </div>
+
+    <div class="scnpart">
+    <h1 id="numri">0</h1>
+    
+</div>
+
+    </div><div id="buttons">
+    <button  id = "hideall">HIDE BODY</button>
+    <button  id = "showall">SHOW BODY</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('h1').click(function () {
+          $('h1').animate({ opacity: '.4' });
+          $('#llogo').fadeOut();
+        });
+        $('#fiek').click(()=>{
+          $('#fiekimg').slideToggle();
+        })
+        $('#hideall').click(()=>{
+          $('#pseudo-body').hide(()=>{
+            alert("body hidden")
+          });
+        })
+        $('#showall').click(()=>{
+          $('#pseudo-body').show(()=>{
+            alert("body shown")
+
+          });
+        })
+      });
+    </script>
+
+    <script>
+
+      var w;
+      w = new Worker("/scripts/worker.js");
+      w.onmessage = function(event) {
+      document.getElementById("numri").innerHTML = event.data;
+    };
+    </script>
   </body>
 </html>
