@@ -5,15 +5,15 @@
 
 
 @font-face {
-  font-family: "Product Sans";
+  font-family: 'Product Sans';
   font-style: normal;
   font-weight: normal;
-  src: local("Product Sans"),
-    url("/files/ProductSans-Regular.woff") format("woff");
+  src: local('Product Sans'),
+    url('/files/ProductSans-Regular.woff') format('woff');
 }
 
 body {
-  font-family: "Product Sans", sans-serif;
+  font-family: 'Product Sans', sans-serif;
   background-color: var(--body-bg);
   transition: background 1s;
 }
@@ -84,6 +84,19 @@ a:hover {
 #emri {
   color: red;
 }
+
+#buttons {
+  font-size: 1.5em;
+  position: relative;
+  left: 45%;
+}
+
+.scnpart {
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+}
+
 .container{
   display: grid;
   grid-template-columns: auto auto auto;

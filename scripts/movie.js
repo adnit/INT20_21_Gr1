@@ -14,7 +14,12 @@ let trailerTitle = document.getElementById("trailer-title");
 let term = "";
 
 function generateDetails() {
-  getMovieDetails(checkURL());
+  try {
+    getMovieDetails(checkURL());
+  } catch (error) {
+    alert(error);
+  }
+
   movieDetailsScreen.style.visibility = "visible";
   trailerBlock.style.visibility = "visible";
   loadingScreen.style.display = "none";

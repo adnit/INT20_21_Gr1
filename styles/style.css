@@ -31,11 +31,11 @@
 }
 
 @font-face {
-  font-family: "Product Sans";
+  font-family: 'Product Sans';
   font-style: normal;
   font-weight: normal;
-  src: local("Product Sans"),
-    url("/files/ProductSans-Regular.woff") format("woff");
+  src: local('Product Sans'),
+    url('/files/ProductSans-Regular.woff') format('woff');
 }
 
 #darkModeBtn {
@@ -52,7 +52,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--body-bg);
   transition: background 1s;
 }
@@ -196,11 +196,19 @@ nav {
 
 .title {
   position: absolute;
-  opacity: 70%;
+  opacity: 80%;
   width: 100%;
   left: 0;
   bottom: 6%;
-  color: var(--sld-tittle);
+
+  background: rgb(47, 79, 79);
+  background: radial-gradient(
+    circle,
+    rgba(47, 79, 79, 0.6755077030812324) 0%,
+    rgba(131, 162, 162, 0.6783088235294117) 100%
+  );
+  font-weight: bold;
+
   text-align: center;
   background-color: var(--sld-btn);
   font-size: 1.3em;
@@ -216,9 +224,10 @@ nav {
 }
 
 .titull {
+  opacity: 100%;
   color: var(--text-color);
   font-size: 1.6em;
-  font-weight: 600;
+  font-weight: bold;
   text-align: left;
   justify-content: center;
   margin-left: 12%;
@@ -367,7 +376,7 @@ footer {
   grid-template-columns: 2fr 0.5fr 1fr;
   grid-template-rows: 2fr;
   gap: 5% 5%;
-  grid-template-areas: ". . .";
+  grid-template-areas: '. . .';
 }
 
 .footer-title {
@@ -395,7 +404,7 @@ footer {
   color: var(--text-color);
 }
 .footer-nav li {
-  list-style-type: "\1F449";
+  list-style-type: '\1F449';
   list-style-position: inside;
 }
 .kinemja {

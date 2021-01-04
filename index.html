@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/style.css" />
   <meta charset="UTF-8" />
   <title>Kino FIEK</title>
-<meta name="title" content="Kino FIEK">
-<meta name="description" content="Online cinema catalog and ticket ordering website">
+  <meta name="title" content="Kino FIEK">
+  <meta name="description" content="Online cinema catalog and ticket ordering website">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kinofiek-2020.netlify.app/">
-<meta property="og:title" content="Kino FIEK">
-<meta property="og:description" content="Online cinema catalog and ticket ordering website">
-<meta property="og:image" content="/images/KinoFiekMetaData.png">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kinofiek-2020.netlify.app/">
+  <meta property="og:title" content="Kino FIEK">
+  <meta property="og:description" content="Online cinema catalog and ticket ordering website">
+  <meta property="og:image" content="/images/KinoFiekMetaData.png">
 </head>
 
 <body>
@@ -49,14 +49,14 @@
       <div class="title">Tenet</div>
       <img src="/images/movies/Tenet.png" style="width: 100%" />
     </div>
-    
+
     <a class="prev" onclick="setSlide(-1)">&#10094;</a>
     <a class="next" onclick="setSlide(1)">&#10095;</a>
-    <div class="loader"></div>
+    <div id='slideloader' class="loader"></div>
 
   </div>
 
- <!--Weeks Most Watched Movies-->
+  <!--Weeks Most Watched Movies-->
 
   <div class="titull">Filmat më të shikuar këtë javë</div>
 
@@ -199,7 +199,7 @@
         </div>
         <p>
           Kinofiek&copy; është website i zhvilluar me HTML5, CSS3,
-          JavaScript dhe jQuery ku përdoruesit mund të shohin se 
+          JavaScript dhe jQuery ku përdoruesit mund të shohin se
           cilët janë filmat më të shikuar të javës, informata rreth
           &#235;tyre filmave, katalogun e kinemas&#x000EB;, shohin
           evente t&euml; kinemasë dhe rezervojnë bileta.
@@ -226,7 +226,7 @@
         </div>
         <p>
           Bregu i Diellit, p.n.<br>
-          10000 Prishtinë,      <br>
+          10000 Prishtinë, <br>
           Republika e Kosovës
         </p>
         <br>
@@ -243,6 +243,16 @@
   <script src="/scripts/slideshow.js"></script>
   <script src="/scripts/movies-catalog.js"></script>
   <script src="/scripts/location.js"></script>
+
+  <script>
+  let canvas = document.getElementById('darkModeBtn')
+  let c = canvas.getContext('2d');
+  clearCanvas(canvas);
+  c.filter = 'blur(1px)'; 
+  c.beginPath();
+  c.arc(75, 75, 45, 0, 2 * Math.PI);
+  c.fillStyle = '#FC9601';
+  c.fill();</script>
 
   <script>
     if ('serviceWorker' in navigator) {
