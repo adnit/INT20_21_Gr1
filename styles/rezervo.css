@@ -523,13 +523,13 @@ align-items: center;
 
     .food1{
       float: left;
-      width:45%;
+      width:46%;
     }
 
     .food2{
       padding-top: 80px;
       float:right;
-      width:55%;
+      width:54%;
     }
 
     .stop-scrolling {
