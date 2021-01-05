@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans'),
+    url('/files/ProductSans-Regular.woff') format('woff');
+}
+
+body {
+  font-family: 'Product Sans', sans-serif;
+  background-color: var(--body-bg);
+  transition: background 1s;
+}
+
+nav {
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+  margin-left: 100px;
+  color: var(--text-color);
+}
+
+.navBar li {
+  list-style-type: none;
+  margin-left: 10%;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.searchBar {
+  background-image: url(/images/searchIcon.png);
+  color: var(--text-color);
+  background-position: 96% 6px;
+  background-size: 23px;
+  padding: 3% 5% 3% 5%;
+  background-color: var(--search-bg);
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+  background-repeat: no-repeat;
+  width: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchBar:hover {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+}
+.searchBar:focus {
+  width: 100%;
+  padding: 3% 5% 3% 5%;
+  border: 1px solid #d6d6d6;
+}
+a {
+  padding: 3%;
+  font-size: 1.2em;
+}
+
+a:visited {
+  color: black;
+}
+a:hover {
+  color: rgb(82, 152, 153);
+}
+
+#emri {
+  color: red;
+}
+
+#buttons {
+  font-size: 1.5em;
+  position: relative;
+  left: 45%;
+}
+
+.scnpart {
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px 20px;
+}
+
+.dyd{
+  margin-left: 100px;
+  width: 200px;
+  height: 150px;
+  background-color: red;
+  transition: 2s;
+  
+  
+}
+.dyd:hover{
+  transform: matrix(-1,0.5,2,1,1.5,3);
+}
+.rotateX{
+  margin-left: 100px;
+  
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  transition: 2s;
+}
+.rotateX:hover{
+  transform: rotateX(180deg);
+}
+.rotateY{
+  margin-left: 100px;
+
+  width: 200px;
+  height: 100px;
+  background-color: lightgreen;
+  transition: 2s;
+}
+.rotateY:hover{
+  transform: rotateY(180deg);
+}
+.tred{
+  margin-top: 30px;
+  margin-left: 100px;
+  width: 200px;
+  height: 150px;
+  background-color: blue;
+  transition: 3s;
+}
+.tred:hover{
+  transform: rotate3d(2,1,2,135deg);
+}
+.matrixtred{
+  margin-top: 30px;
+  margin-left: 100px;
+  width: 200px;
+  height: 150px;
+  background-color: aquamarine;
+  transition: 3s;
+}
+.matrixtred:hover{
+  transform: matrix3d(1,0,0,0,0,1,6,0,0,0,1,1,50,100,0,1.1);
+}

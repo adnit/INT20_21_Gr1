@@ -30,6 +30,14 @@
   --catbtn-c2-hover: #91a9ad;
 }
 
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans'),
+    url('/files/ProductSans-Regular.woff') format('woff');
+}
+
 #darkModeBtn {
   z-index: 40;
   position: fixed;
@@ -44,7 +52,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--body-bg);
   transition: background 1s;
 }
@@ -74,6 +82,7 @@ nav {
   text-decoration: none;
   color: var(--text-color);
 }
+
 
 .searchBar {
   background-image: url(/images/searchIcon.png);
@@ -149,6 +158,7 @@ nav {
   background-color: var(--sld-btn);
   border-radius: 0 3px 3px 0;
   transition: ease 0.4s;
+  z-index: 30;
 }
 
 .next {
@@ -164,14 +174,39 @@ nav {
   border-radius: 0 15px 15px 0;
   opacity: 95%;
 }
+.loader {
+  background-color: darkslategray;
+  height: 5px;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  animation: animate 7s linear infinite alternate;
+}
+
+@keyframes animate {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
 
 .title {
   position: absolute;
-  opacity: 70%;
+  opacity: 80%;
   width: 100%;
   left: 0;
-  bottom: 4%;
-  color: var(--sld-tittle);
+  bottom: 6%;
+
+  background: rgb(47, 79, 79);
+  background: radial-gradient(
+    circle,
+    rgba(47, 79, 79, 0.6755077030812324) 0%,
+    rgba(131, 162, 162, 0.6783088235294117) 100%
+  );
+  font-weight: bold;
+
   text-align: center;
   background-color: var(--sld-btn);
   font-size: 1.3em;
@@ -187,9 +222,10 @@ nav {
 }
 
 .titull {
+  opacity: 100%;
   color: var(--text-color);
   font-size: 1.6em;
-  font-weight: 600;
+  font-weight: bold;
   text-align: left;
   justify-content: center;
   margin-left: 12%;
@@ -218,7 +254,8 @@ nav {
 .movie {
   margin: 15px;
   float: left;
-  width: 18%;
+  width: 20%;
+  height: 210px;
   border: 1px solid black;
   border-radius: 5px 5px 5px 5px;
 }
@@ -337,7 +374,7 @@ footer {
   grid-template-columns: 2fr 0.5fr 1fr;
   grid-template-rows: 2fr;
   gap: 5% 5%;
-  grid-template-areas: ". . .";
+  grid-template-areas: '. . .';
 }
 
 .footer-title {
@@ -365,7 +402,7 @@ footer {
   color: var(--text-color);
 }
 .footer-nav li {
-  list-style-type: "\1F449";
+  list-style-type: '\1F449';
   list-style-position: inside;
 }
 .kinemja {

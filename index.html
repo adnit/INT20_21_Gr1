@@ -2,183 +2,193 @@
 <html lang="en">
 
 <head>
-
-
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/style.css" />
   <meta charset="UTF-8" />
-  <meta name="description" content="Online cinema catalog and ticket ordering website" />
   <title>Kino FIEK</title>
+  <meta name="title" content="Kino FIEK">
+  <meta name="description" content="Online cinema catalog and ticket ordering website">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kinofiek-2020.netlify.app/">
+  <meta property="og:title" content="Kino FIEK">
+  <meta property="og:description" content="Online cinema catalog and ticket ordering website">
+  <meta property="og:image" content="/images/KinoFiekMetaData.png">
 </head>
 
 <body>
+
   <!--Nav bar, searchbar-->
 
   <nav>
     <ul class="navBar">
       <li><a href="#">Home</a></li>
-      <li><a href="/catalog.html">Katalogu</a></li>
-      <li><a href="/events.html">Evente</a></li>
-      <li><a href="/order.html">Rezervo</a></li>
-      <li><a href="/contact.html">Kontakto</a></li>
+      <li><a href="/katalogu.html">Katalogu</a></li>
+      <li><a href="/evente.html">Evente</a></li>
+      <li><a href="/rezervo.html">Rezervo</a></li>
+      <li><a href="/kontakto.html">Kontakto</a></li>
     </ul>
     <div class="searchIcon">
-      <input class="searchBar" type="text" name="Kerko" placeholder="Kerko filmin" />
+      <input class="searchBar" type="text" name="Kerko" placeholder="Kërko filmin" />
     </div>
   </nav>
+
   <!--Slideshow-->
 
   <div class="slideshow">
-    <div class="slide" onclick="window.location='#';">
-      <div class="title">Wonder Woman 1984</div>
-      <img src="/images/movies/ww1984.jpg" style="width: 100%" />
+    <div class="slide" onclick="setMovieID('tt1302006')">
+      <div class="title">The Irishman</div>
+      <img src="/images/movies/TheIrishman.jpg" style="width: 100%" />
     </div>
-    <div class="slide" onclick="window.location='#';">
-      <div class="title">Greenland</div>
-      <img src="/images/movies/greenland.jpg" style="width: 100%" />
+    <div class="slide" onclick="setMovieID('tt0099785')">
+      <div class="title">Home Alone</div>
+      <img src="/images/movies/HomeAlone.jpg" style="width: 100%" />
     </div>
-    <div class="slide" onclick="window.location='#';">
+    <div class="slide" onclick="setMovieID('tt6723592')">
       <div class="title">Tenet</div>
-      <img src="/images/movies/tenet.jpg" style="width: 100%" />
+      <img src="/images/movies/Tenet.png" style="width: 100%" />
     </div>
 
     <a class="prev" onclick="setSlide(-1)">&#10094;</a>
     <a class="next" onclick="setSlide(1)">&#10095;</a>
+    <div id='slideloader' class="loader"></div>
+
   </div>
 
-  <div class="titull">Filmat me te shikuar kete jave</div>
+  <!--Weeks Most Watched Movies-->
 
-  <!--Movie Catalog-->
+  <div class="titull">Filmat më të shikuar këtë javë</div>
 
   <div class="movies-catalog">
     <div class="movie" onmouseover="makeVisible(info1)" onmouseout="makeUnvisible(info1)">
-      <a href="#">
-        <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+      <a>
+        <img src="/images/movies/HonestThief.jpeg" alt="Honest Thief" onclick="setMovieID('tt1838556')" />
       </a>
       <div id="info1" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Honest Thief</div>
+        <div class="rating">6.0 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info2)" onmouseout="makeUnvisible(info2)">
-      <a href="#">
-        <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+      <a>
+        <img src="/images/movies/Soul.jpeg" alt="Soul" onclick="setMovieID('tt2948372')" />
       </a>
       <div id="info2" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Soul</div>
+        <div class="rating">8.2 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info3)" onmouseout="makeUnvisible(info3)">
-      <a href="#">
-        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      <a>
+        <img src="/images/movies/Greenland.png" alt="Green Land" onclick="setMovieID('tt7737786')" />
       </a>
       <div id="info3" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Greenland</div>
+        <div class="rating">6.4 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info4)" onmouseout="makeUnvisible(info4)">
-      <a href="#">
-        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt8111088')" src="/images/movies/SpenserConfidential.jpg"
+          alt="Spenser Confidential" />
       </a>
       <div id="info4" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Spenser Confidential</div>
+        <div class="rating">6.2 &#9733;</div>
       </div>
     </div>
   </div>
 
-  <a onclick="showMore()" id="show-more">shiko me shume...</a>
+  <a onclick="showMore()" id="show-more">shiko më shumë...</a>
 
-  <!-- More Movies -->
   <!-- More Movies -->
 
   <div id="more-movies1">
     <div class="movie" onmouseover="makeVisible(info5)" onmouseout="makeUnvisible(info5)">
-      <a href="#">
-        <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt10059518')" src="/images/movies/Unhinged.jpg" alt="Unhinged" />
       </a>
       <div id="info5" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Unhinged</div>
+        <div class="rating">6.0 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info6)" onmouseout="makeUnvisible(info6)">
-      <a href="#">
-        <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt7126948')" src="/images/movies/WonderWoman1984.jpg" alt="Wonder Woman 1984" />
       </a>
       <div id="info6" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Wonder Woman 1984</div>
+        <div class="rating">5.6 &#9733;</div>
       </div>
     </div>
     <br />
     <div class="movie" onmouseover="makeVisible(info7)" onmouseout="makeUnvisible(info7)">
-      <a href="#">
-        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt10539608')" src="/images/movies/TheMidnightSky.jpg" alt="The Midnight Sky" />
       </a>
       <div id="info7" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">The Midnight Sky</div>
+        <div class="rating">5.6 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info8)" onmouseout="makeUnvisible(info8)">
-      <a href="#">
-        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt7395114')" src="/images/movies/TheDevilAllTheTime.jpg"
+          alt="The Devil All the Time" />
       </a>
       <div id="info8" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">The Devil All the Time</div>
+        <div class="rating">7.1 &#9733;</div>
       </div>
     </div>
   </div>
   <div id="more-movies2">
     <div class="movie" onmouseover="makeVisible(info9)" onmouseout="makeUnvisible(info9)">
-      <a href="#">
-        <img src="/images/movies/tenet.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt10310140')" src="/images/movies/Fatman.jpg" alt="Fatman" />
       </a>
       <div id="info9" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Fatman</div>
+        <div class="rating">5.9 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info10)" onmouseout="makeUnvisible(info10)">
-      <a href="#">
-        <img src="/images/movies/ww1984.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt7979142')" src="/images/movies/TheNightClerk.jpg" alt="The Night Clerk" />
       </a>
       <div id="info10" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">The Night Clerk</div>
+        <div class="rating">5.5 &#9733;</div>
       </div>
     </div>
     <br />
     <div class="movie" onmouseover="makeVisible(info11)" onmouseout="makeUnvisible(info11)">
-      <a href="#">
-        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt8936646')" src="/images/movies/Extraction.jpg" alt="Extraction" />
       </a>
       <div id="info11" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">Extraction</div>
+        <div class="rating">6.7 &#9733;</div>
       </div>
     </div>
     <div class="movie" onmouseover="makeVisible(info12)" onmouseout="makeUnvisible(info12)">
-      <a href="#">
-        <img src="/images/movies/greenland.jpg" alt="Movie 1" />
+      <a>
+        <img onclick="setMovieID('tt7504726')" src="/images/movies/TheCallOfTheWild.jpg" alt="The Call of the Wild" />
       </a>
       <div id="info12" class="info">
-        <div class="info-title">Movie Info</div>
-        <div class="rating">4.5 &#9733;</div>
+        <div class="info-title">The Call of the Wild</div>
+        <div class="rating">6.8 &#9733;</div>
       </div>
     </div>
   </div>
-  <a onclick="showLess()" id="show-less">me pak</a>
+  <a onclick="showLess()" id="show-less">më pak</a>
 
   <br />
   <br />
 
-  <a href="#" class="catalogBtn">Shiko te gjithe katalogun</a>
+  <a href="/katalogu.html" class="catalogBtn">Shiko të gjithë katalogun</a>
 
   <!-- FOOTER -->
   <footer>
@@ -188,25 +198,25 @@
           <h5>Kino Fiek</h5>
         </div>
         <p>
-          Kinofiek eshte website i zhvilluar me HTML5, CSS3, JavaScript ku
-          perdoruesit mund te shohin se cilet jane filmat me te shikuar te
-          javes, katalogun e kinemase, shohin evente te kinemase, rezervojn
-          bileta. <br />
-          <br />
-          <br />
+          Kinofiek&copy; është website i zhvilluar me HTML5, CSS3,
+          JavaScript dhe jQuery ku përdoruesit mund të shohin se
+          cilët janë filmat më të shikuar të javës, informata rreth
+          &#235;tyre filmave, katalogun e kinemas&#x000EB;, shohin
+          evente t&euml; kinemasë dhe rezervojnë bileta.
         </p>
       </div>
 
       <div class="footer-nav">
         <div class="footer-title">
-          <h5>Navigation</h5>
+          <h5>Navigacion</h5>
         </div>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Katalogu</a></li>
-          <li><a href="#">Evente</a></li>
-          <li><a href="#">Rezervo</a></li>
-          <li><a href="#">Kontakto</a></li>
+          <li><a href="/katalogu.html">Katalogu</a></li>
+          <li><a href="/evente.html">Evente</a></li>
+          <li><a href="/rezervo.html">Rezervo</a></li>
+          <li><a href="/kontakto">Kontakto</a></li>
+          <li><a target="_blank" href="/extras.html">Extras</a></li>
         </ul>
       </div>
 
@@ -214,25 +224,40 @@
         <div class="footer-title">
           <h5>Lokacioni</h5>
         </div>
-        <p>Bregu i Diellit, p.n. <br>
-          10000 Prishtinë,<br>|
-          Republika e Kosovës</p>
+        <p>
+          Bregu i Diellit, p.n.<br>
+          10000 Prishtinë, <br>
+          Republika e Kosovës
+        </p>
         <br>
-        <a onclick="calculate()" id="distance-btn">Distanca</a>
+        <a onclick="calculate()" id="distance-btn">Llogarit distancën</a>
       </div>
 
-      <canvas id = "darkModeBtn" width="150" height="150"></canvas>
-  
+      <canvas id="darkModeBtn" width="150" height="150"></canvas>
+
   </footer>
+
+  <!-- SCRIPTS -->
+
   <script src="/scripts/theme.js"></script>
   <script src="/scripts/slideshow.js"></script>
   <script src="/scripts/movies-catalog.js"></script>
   <script src="/scripts/location.js"></script>
 
   <script>
+  let canvas = document.getElementById('darkModeBtn')
+  let c = canvas.getContext('2d');
+  clearCanvas(canvas);
+  c.filter = 'blur(1px)'; 
+  c.beginPath();
+  c.arc(75, 75, 45, 0, 2 * Math.PI);
+  c.fillStyle = '#FC9601';
+  c.fill();</script>
+
+  <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/offline.js').then(function (registration) {
+        navigator.serviceWorker.register('/scripts/offline.js').then(function (registration) {
           console.log('Service worker success');
         }).catch(function (error) {
           console.log('Service worker failed');
