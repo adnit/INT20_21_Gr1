@@ -129,7 +129,7 @@ p.dita {
 }
 
 #dkino {
-  background-image: url("popcorn.jpg");
+  background-image: url(/images/popcorn.jpg);
   border-radius: 1%;
   background-repeat: no-repeat;
   background-size:1100px;
@@ -137,16 +137,9 @@ p.dita {
 
 }
 
-#ffund {
-
-}
-
-#ddashuri {
-  
-}
 
 #hallo {
-  background-image: url("halloween.jpg");
+  background-image: url(/images/halloween.jpg);
   border-radius: 1%;
 }
 h1.hallo{
@@ -220,8 +213,111 @@ a.hallo {
  }
 
 #foto1{
-  background-image: url(memories.jpeg);
+  background-image: url(/images/memories.jpeg);
   background-repeat: no-repeat;
   background-size: 1100px;
   border-radius: 1%;
+}
+#oraret {
+  background-image: url(/images/evente2.jpg);
+  background-repeat: no-repeat;
+  background-size: 1100px;
+  border-radius: 1%;
+ 
+}
+
+table.oraret {
+  border: none;
+  text-align: center;
+  width: 100%;
+  
+  
+}
+.t1, .t2, .t3, .t4 {
+  padding: 30px;
+  width: 60px;
+  border-radius: 2%;
+  
+}
+.t1 {
+  background-color: rgb(173, 216, 230, 0.7);
+}
+.t2 {
+  background-color: rgb(255, 165, 0, 0.7);
+}
+.t3 {
+  background-color: rgb(255, 192, 203, 0.7);
+}
+.t4 {
+  background-color: rgb(42, 160, 42, 0.7);
+}
+h3.oraret{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  
+}
+
+#ffund {
+  background-image: url(/images/christmas.jpg);
+  background-repeat: no-repeat;
+  background-size: 1100px;
+  border-radius: 1%;
+  color:rgb(206, 11, 11);
+  font-weight: bold;
+  text-align: center;
+}
+ul.nb {
+  list-style-type: none;
+}
+
+h2.ffund {
+  font-family:"Lucida Handwriting", cursive ;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+section#ffund1 {
+  border: 3px solid #f1f1f1;
+  background: rgb(225, 225, 225, 0.7);
+  border-radius: 1%;
+  margin-left: 600px;
+  height: 150px;
+  
+}
+
+div.countdown {
+  text-align: left;
+  color: white;
+  font-family:"Lucida Handwriting", cursive ;
+  font-size:x-large;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+}
+
+div#ddashuri {
+  background-image: url(/images/hearts2.png), url(/images/love.jpg);
+  background-repeat: no-repeat;
+  background-size: 1100px;
+  border-radius: 1%;
+  
+}
+p#ddashuri2 {
+  width: 400px;
+  column-count: 2;
+  column-rule: 1px solid pink;
+  column-gap: 10px;
+}
+video#hw {
+  float: right;
+}
+p#hw1 {
+  text-align: end;
+  color:white;
+  font-family: "fantasy", Papyrus;
+}
+div#Christmas {
+  text-align: end;
+  color: white;
 }
