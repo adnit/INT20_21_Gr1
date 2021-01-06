@@ -6,7 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color:lightgray;
+  background-color:#edfdff;
   transition: background 3s;
 }
 .movie {
@@ -115,9 +115,7 @@ nav {
   background-color: #ddd;
 }
 
-.tab button.active {
-  background-color: #ccc;
-}
+
 
 .tabcontent {
   display: none;
@@ -128,6 +126,7 @@ nav {
   border-top: none;
 }
 
+
 footer {
   color: var(--text-color);
   margin-top: 3%;
@@ -135,7 +134,7 @@ footer {
   display: inline-flex;
   align-items: center;
   width: 100%;
-  background-color: var(--footer-bg);
+  background-color: #c9edfc;
 }
 
 .grid-container {

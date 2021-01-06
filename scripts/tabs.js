@@ -1,4 +1,4 @@
-function Filmat(evt, Filmi) {
+function Filmat(Filmi) {
   sessionStorage.setItem("evt", Filmi);
   
  
@@ -9,10 +9,11 @@ function Filmat(evt, Filmi) {
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].classList.remove("active");
   }
   document.getElementById(Filmi).style.display = "block";
-  evt.currentTarget.className += " active";
+  document.getElementById(Filmi).classList.add("active");
+  
 }
  
 function checkKey() {
@@ -21,10 +22,10 @@ function checkKey() {
  
 function onLoad() {
   if (sessionStorage.getItem("evt") == undefined) {
-    Filmat(event,'Aksion');
+    Filmat('Aksion');
   } else {
     let evt1 = sessionStorage.getItem("evt");
-    Filmat(event,evt1);
+    Filmat(evt1);
   }
 }
  
