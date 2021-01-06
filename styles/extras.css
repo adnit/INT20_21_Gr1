@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0px;
+  
 }
 
 
@@ -158,4 +158,20 @@ a:hover {
 }
 .matrixtred:hover{
   transform: matrix3d(1,0,0,0,0,1,6,0,0,0,1,1,50,100,0,1.1);
+}
+dl {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 0;
+}
+dt{
+   margin-left: 0;
+   justify-content: left;
+   text-align: left;
+}
+dd{
+  margin-left: 50px;
+  text-align: center;
 }
