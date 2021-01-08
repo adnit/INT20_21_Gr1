@@ -83,7 +83,6 @@ nav {
   color: var(--text-color);
 }
 
-
 .searchBar {
   background-image: url(/images/searchIcon.png);
   color: var(--text-color);
@@ -367,6 +366,10 @@ footer {
   background-color: var(--footer-bg);
 }
 
+footer p {
+  font-size: 0.8em;
+}
+
 .grid-container {
   margin: 0 3%;
   display: grid;
@@ -388,12 +391,13 @@ footer {
 }
 
 .footer-desc p {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .footer-nav {
   margin-left: 1%;
   font-size: 1em;
+  width: 100%;
   color: var(--text-color);
 }
 
@@ -406,12 +410,14 @@ footer {
   list-style-position: inside;
 }
 .kinemja {
+  font-size: 0.8em;
+
   vertical-align: top;
   background-color: var(--text-color);
 }
 
 #distance-btn {
-  font-size: 1.05em;
+  font-size: 0.8em;
   margin-top: 335px;
   padding: 7px;
   text-decoration: none;
@@ -479,5 +485,8 @@ footer {
 @media (max-width: 1000px) {
   .slide img {
     height: 305px;
+  }
+  footer {
+    font-size: 0.8em;
   }
 }
