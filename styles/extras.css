@@ -1,8 +1,6 @@
 * {
   box-sizing: border-box;
-  
 }
-
 
 @font-face {
   font-family: 'Product Sans';
@@ -81,6 +79,16 @@ a:hover {
   color: rgb(82, 152, 153);
 }
 
+#game {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  margin: auto;
+  width: fit-content;
+  background-color: rgb(255, 181, 181);
+  border-radius: 3%;
+}
+
 #emri {
   color: red;
 }
@@ -97,36 +105,34 @@ a:hover {
   justify-content: center;
 }
 
-.container{
+.container {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 30px 20px;
 }
 
-.dyd{
+.dyd {
   margin-left: 100px;
   width: 200px;
   height: 150px;
   background-color: red;
   transition: 2s;
-  
-  
 }
-.dyd:hover{
-  transform: matrix(-1,0.5,2,1,1.5,3);
+.dyd:hover {
+  transform: matrix(-1, 0.5, 2, 1, 1.5, 3);
 }
-.rotateX{
+.rotateX {
   margin-left: 100px;
-  
+
   width: 200px;
   height: 100px;
   background-color: lightblue;
   transition: 2s;
 }
-.rotateX:hover{
+.rotateX:hover {
   transform: rotateX(180deg);
 }
-.rotateY{
+.rotateY {
   margin-left: 100px;
 
   width: 200px;
@@ -134,10 +140,10 @@ a:hover {
   background-color: lightgreen;
   transition: 2s;
 }
-.rotateY:hover{
+.rotateY:hover {
   transform: rotateY(180deg);
 }
-.tred{
+.tred {
   margin-top: 30px;
   margin-left: 100px;
   width: 200px;
@@ -145,10 +151,10 @@ a:hover {
   background-color: blue;
   transition: 3s;
 }
-.tred:hover{
-  transform: rotate3d(2,1,2,135deg);
+.tred:hover {
+  transform: rotate3d(2, 1, 2, 135deg);
 }
-.matrixtred{
+.matrixtred {
   margin-top: 30px;
   margin-left: 100px;
   width: 200px;
@@ -156,8 +162,8 @@ a:hover {
   background-color: aquamarine;
   transition: 3s;
 }
-.matrixtred:hover{
-  transform: matrix3d(1,0,0,0,0,1,6,0,0,0,1,1,50,100,0,1.1);
+.matrixtred:hover {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 1, 50, 100, 0, 1.1);
 }
 dl {
   display: block;
@@ -166,12 +172,12 @@ dl {
   margin-left: 40px;
   margin-right: 0;
 }
-dt{
-   margin-left: 0;
-   justify-content: left;
-   text-align: left;
+dt {
+  margin-left: 0;
+  justify-content: left;
+  text-align: left;
 }
-dd{
+dd {
   margin-left: 50px;
   text-align: center;
 }

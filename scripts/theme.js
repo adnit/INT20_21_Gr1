@@ -122,6 +122,4 @@ darkMode.addEventListener('click', () => {
   checkDarkMode() ? drawEarth(darkMode, 1) : drawEarth(darkMode, 0);
 });
 
-window.onLoad = () => {
-  darkModeTime();
-};
+darkModeTime();
