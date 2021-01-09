@@ -81,7 +81,7 @@ hr {
   border-radius: 10%;
   background-color: #f1f1f1;
   width: 20%;
-  height: 300px;
+  height: 420px;
   padding-top: 2%;
   margin:2%;
 }
@@ -132,7 +132,7 @@ p.dita {
   background-image: url(/images/popcorn.jpg);
   border-radius: 1%;
   background-repeat: no-repeat;
-  background-size:1100px;
+  background-size:cover;
   
 
 }
@@ -141,6 +141,7 @@ p.dita {
 #hallo {
   background-image: url(/images/halloween.jpg);
   border-radius: 1%;
+  background-size: cover;
 }
 h1.hallo{
   font-family: "fantasy", Papyrus;
@@ -159,6 +160,11 @@ div#hallo1 {
 }
 a.hallo {
   color:white;
+}
+ol.hallo {
+    color: white; 
+    font-family: 'fantasy', Papyrus;
+    margin-left: 2%;
 }
 
 #forma1 {
@@ -215,13 +221,13 @@ a.hallo {
 #foto1{
   background-image: url(/images/memories.jpeg);
   background-repeat: no-repeat;
-  background-size: 1100px;
+  background-size: cover;
   border-radius: 1%;
 }
 #oraret {
   background-image: url(/images/evente2.jpg);
   background-repeat: no-repeat;
-  background-size: 1100px;
+  background-size: cover;
   border-radius: 1%;
  
 }
@@ -261,7 +267,7 @@ h3.oraret{
 #ffund {
   background-image: url(/images/christmas.jpg);
   background-repeat: no-repeat;
-  background-size: 1100px;
+  background-size: cover;
   border-radius: 1%;
   color:rgb(206, 11, 11);
   font-weight: bold;
@@ -299,7 +305,7 @@ div.countdown {
 div#ddashuri {
   background-image: url(/images/hearts2.png), url(/images/love.jpg);
   background-repeat: no-repeat;
-  background-size: 1100px;
+  background-size: cover;
   border-radius: 1%;
   
 }
@@ -308,6 +314,9 @@ p#ddashuri2 {
   column-count: 2;
   column-rule: 1px solid pink;
   column-gap: 10px;
+}
+div#ddashuri1{
+  float: left;
 }
 video#hw {
   float: right;
@@ -320,4 +329,23 @@ p#hw1 {
 div#Christmas {
   text-align: end;
   color: white;
+}
+div#ddashuri3 {
+  background-color: rgba(228, 112, 193, 0.6);
+  margin-left: 500px;
+  height: 300px;
+  color: white;
+  text-align: center;
+  border:violet 1px solid;
+  border-radius: 2%;
+}
+
+.btn1 {
+  background-color: rgb(160, 52, 115);
+  color: white;
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  opacity: 0.8;
+  height: 30px;
 }
