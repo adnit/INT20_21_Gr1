@@ -1,234 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Evente</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="./styles/events.css" />
-	</head>
-	<body>
-		<header>
-			<nav>
-				<ul class="navBar">
-					<li>
-						<a href="/home.html">Home</a>
-					</li>
-					<li>
-						<a href="/katalogu.html">Katalogu</a>
-					</li>
-					<li>
-						<a href="#">Evente</a>
-					</li>
-					<li>
-						<a href="/order.html">Rezervo</a>
-					</li>
-					<li>
-						<a href="/contact.html">Kontakto</a>
-					</li>
-				</ul>
-				<div class="searchIcon">
-					<input class="searchBar" type="text" name="Kerko" placeholder="Kerko eventin" />
-				</div>
-			</nav>
-			<h2>Evente</h2>
-			<hr>
-				<div class="verticalTab">
-					<button class="vtlink" onclick="dyjat(event, 'oraret', 'audio1')" id="current">Oraret e eventeve</button>
-					<button class="vtlink" onclick="dyjat(event, 'dkino', 'audio2')" >Dita e kinemase</button>
-					<button class="vtlink" onclick="dyjat(event, 'ffund', 'audio3')">Festat e fundvitit</button>
-					<button class="vtlink" onclick="dyjat(event, 'ddashuri', 'audio4')">Dita e te dashuruarve</button>
-					<button class="vtlink" onclick="dyjat(event, 'hallo', 'audio5')">Halloween</button>
-					<button class="vtlink" onclick="dyjat(event, 'foto1', 'audio6')">Dergoni fotot tuaja</button>
-				</div>
-			</header>
-			<div id="oraret" class="tabcontent">
-				<h3 class="oraret">Oraret e eventeve</h3>
-				<table class="oraret" cellspacing="5px" cellpadding="3px">
-					<tr>
-						<th class="t1">
-							<b>Dita e kinemase</b>
-						</th>
-						<th class="t2">
-							<b>Halloween</b>
-						</th>
-						<th class="t3">
-							<b>Dita e te dashuruarve</b>
-						</th>
-						<th class="t4">
-							<b>Festat e fundvitit</b>
-						</th>
-					</tr>
-					<tr>
-						<td class="t1">E premte</td>
-						<td class="t2">31 Tetor</td>
-						<td class="t3">14 Shkurt</td>
-						<td class="t4">25-31 Dhjetor</td>
-					</tr>
-					<tr>
-						<td class="t1">08:00-23:00</td>
-						<td class="t2">18:00-23:00</td>
-						<td class="t3">18:00-23:00</td>
-						<td class="t4">19:00-01:00</td>
-					</tr>
-				</table>
-				<audio id="audio1" src="./files/Oraret.mp3" type="audio/mpeg"></audio>
-			</div>
-			<div id="dkino" class="tabcontent">
-				<h3 class="dita">Dita e kinemase</h3>
-				<h4 class="dita">Cdo te premte FRIDAY NIGHT!</h4>
-				<p class="dita">Cdo te premte eshte dita e kinemase dhe ne kete dite gjeni cmimet me te speciale te biletave.
-        Na vizitoni kete dite dhe do te bindeni.
-					<br>
-        Bileta 2D 2.00&euro;! 
-						<br>
-        Bileta 3D 3.00&euro;!
-      
-						</p>
-						<audio id="audio2" src="./files/Cinema.mp3" type="audio/mpeg"></audio>
-						<figure>
-							<img src="/images/fun1.png" alt="fun" style="width: 220px;" >
-								<figcaption style="margin-left: 50px; ">Qka ju dhurojme!</figcaption>
-							</figure>
-						</div>
-						<div id="ffund" class="tabcontent">
-							<div class="countdown">
-								<h4>PRESIM SE BASHKU VITIN E RI!</h4>
-								<h4 id="countdown"></h4>
-							</div>
-							<section id="ffund1">
-								<p>Tako babagjyshin dhe fito dhurata per fundvit: </p>
-								<ul class="nb">
-									<li>
-										<abbr title="PlayStation 5">PS5</abbr>
-									</li>
-									<li>Xbox Series X</li>
-									<li>Giftcard ne Dukagjini</li>
-									<li>Giftcard ne Gjirafa</li>
-									<li>dhe shume dhurata tjera...</li>
-								</ul>
-							</section>
-							<div id="Christmas">
-								<h2 class="ffund">WE WISH YOU A MERRY CHRISTMAS AND A HAPPY NEW YEAR!</h2>
-								<p>THE GRINCH Trailer (Premiere vetem tek ne)</p>
-								<video width="300px" height="200px" controls>
-									<source src="./files/Grinch.mp4" type="video/mp4">Grinch Trailer
-									</video>
-								</div>
-								<audio id="audio3" src="./files/Christmas.mp3" type="audio/mpeg"></audio>
-							</div>
-							<div id="ddashuri" class="tabcontent">
-								<h3>Dita e te dashuruarve</h3>
-								<audio id="audio4" src="./files/Lovesong.mp3" type="audio/mpeg"></audio>
-								<div id="ddashuri1">
-									<p id="ddashuri2">Nje nder ditet me te bukura te vitit! Festoni diten e te dashuruarve me me te dashurit tuaj. Shperndani dashuri!
-          Dita e Shen Valentinit eshte ajo qe i duhet shpirtit. Eshte sikur &ccedil;okollata e nxehte, ne dimer te ftohte. 
-          Eshte shperthim i ngjyrave ne nje hapesire te bardhe. Eshte dita kur dashurojme dhe dita kur nuk kemi frike ti 
-          shprehim ndjenjat tona. E ku ka me mire sesa te festoni me nje film romantik?! 
-          Ejani tek ne dhe rezervoni uleset dyshe per &ccedil;ifte. Eksperience e paharruar me oferta speciale per dy persona!
-        </p>
-								</div>
-								<div id="ddashuri3">
-      								<h4>Nuk keni te dashur?!</h4>
-      								<p>Pa problem! Ne ju gjejme partnerin per Shen Valentin! Aplikoni per te shikuar film se bashku me dikend si ju!</p>
-      
-      								<div id="gjej">
-      								<form id="forma2">
-
-      								<label for="emri1">Emri:</label> <br>
-      								<input type="text" id="emri1" name="emri1"> <br>
-
-      								<label for="mbiemri1">Mbiemri:</label> <br>
-      								<input type="text" id="mbiemri1" name="mbiemri1"> <br>
-
-      								<label for="mosha">Mosha:</label> <br>
-      								<input type="number" id="mosha" name="mosha"> <br>
-
-      								<label for="gjinia">Gjinia:</label><br>
-      								<input type="radio" id="mashkull" name="gjinia"> M <br>
-      								<input type="radio" id="femer" name="gjinia"> F <br>
-      								<input type="radio" id="pacaktuar" name="gjinia"> Pacaktuar <br>
-
-      
-
-      								<button type="submit" class="btn1">Submit</button> <br>
-      								</form>
-    
-      								</div>
-      								</div>
-      								<h3 style="color:white; font-family: 'Lucida Hanwriting', Lucida Handwriting;">YOU ALWAYS GAIN BY GIVING LOVE!</h3>
-							</div>
-							<div id="hallo" class="tabcontent">
-								<h1 class="hallo">SPOOKY SEASON IS HERE!</h1>
-								<p id="hw1">Come Play Trailer(Premiere tek ne)</p>
-								<video id="hw" width="300px" height="200px" controls>
-									<source src="./files/Comeplay.mp4" type="video/mp4">Come Play Trailer
-									</video>
-									<div id="hallo2">
-										<p class="hallo">Ejani ne daten 31 tetor! Behuni gati per makthet me te keqija.
-											<br>
-      Ofertat me interesante i gjeni tek ne: 
-												<br>
-												</p>
-												<ol class="hallo">
-													<li>Kokoshka 
-														<abbr title="Medium">M</abbr> Pije 
-														<abbr title="Medium">M</abbr> + Snickers 6.99&euro;! 
-														<br>
-														</li>
-														<li>Kokoshka 
-															<abbr title="Small">S</abbr> Pije 
-															<abbr title="Small">S</abbr> + Rafaelo  4.99&euro;! 
-															<Br>
-															</li>
-														</ol>
-														<p style="color: white; font-family: 'fantasy', Papyrus;">
-      														Mos harroni kostumet!!
-      														</p>
-													</div>
-													<div id="hallo1">
-														<label>Per listen e filmave klikoni:</label>
-														<a class="hallo" href="/katalogu.html" target="_blank">Katalogu</a>
-													</div>
-													<audio id="audio5" src="./files/Halloween.mp3" type="audio/mpeg"></audio>
-												</div>
-												<div id="foto1" class="tabcontent">
-													<audio id="audio6" src="./files/Memories.mp3" type="audio/mpeg"></audio>
-													<h3 class="tfoto">Keni marre pjese ne eventet e kaluara? 
-														<Br>
-      Beni upload fotot qe keni bere per t'i kujtuar, ju bashke me ne!
-														</h3>
-														<div id="foto" class="popup">
-															<form id="forma1" class="formcontainer">
-																<label for="emri">Emri:</label>
-																<br>
-																	<input type="text" id="emri" name="emri">
-																		<br>
-																			<label for="mbiemri">Mbiemri:</label>
-																			<br>
-																				<input type="text" id="mbiemri" name="mbiemri">
-																					<br>
-																						<label for="eventi1">Eventi:</label>
-																						<br>
-																							<input type="text" id="eventi1" name="eventi1">
-																								<br>
-																									<label for="data">Data:</label>
-																									<br>
-																										<input type="date" id="data" name="data1">
-																											<br>
-																												<label for="files">Beni upload fotot:</label>
-																												<br>
-																													<input type="file" id="files" name="fotot" multiple>
-																														<br>
-																															<button type="submit" class="btn">Upload</button>
-																															<br>
-																																<button type="button" class="cancel" onclick="closeForm()">Close</button>
-																															</form>
-																														</div>
-																														<button id="ob" class="open-button" onclick="openForm()">Beni upload</button>
-																													</div>
-																													<script src="./scripts/events.js">      
-      dyjat(event, "oraret", "audio1"); 
-      closeForm();    
-
-    </script>
-																												</body>
-																											</html>
+   <head>
+      <title>Evente</title>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" href="./styles/events.css" />
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul class="navBar">
+               <li>
+                  <a href="/home.html">Home</a>
+               </li>
+               <li>
+                  <a href="/katalogu.html">Katalogu</a>
+               </li>
+               <li>
+                  <a href="#">Evente</a>
+               </li>
+               <li>
+                  <a href="/order.html">Rezervo</a>
+               </li>
+               <li>
+                  <a href="/contact.html">Kontakto</a>
+               </li>
+            </ul>
+            <div class="searchIcon">
+               <input class="searchBar" type="text" name="Kerko" placeholder="Kerko eventin" />
+            </div>
+         </nav>
+         <h2>Evente</h2>
+         <hr>
+         <div class="verticalTab">
+            <button class="vtlink" onclick="dyjat(event, 'oraret', 'audio1')" id="current">Oraret e eventeve</button>
+            <button class="vtlink" onclick="dyjat(event, 'dkino', 'audio2')" >Dita e kinemase</button>
+            <button class="vtlink" onclick="dyjat(event, 'ffund', 'audio3')">Festat e fundvitit</button>
+            <button class="vtlink" onclick="dyjat(event, 'ddashuri', 'audio4')">Dita e te dashuruarve</button>
+            <button class="vtlink" onclick="dyjat(event, 'hallo', 'audio5')">Halloween</button>
+            <button class="vtlink" onclick="dyjat(event, 'foto1', 'audio6')">Dergoni fotot tuaja</button>
+         </div>
+      </header>
+      <div id="oraret" class="tabcontent">
+         <h3 class="oraret">Oraret e eventeve</h3>
+         <table class="oraret" cellspacing="5px" cellpadding="3px">
+            <tr>
+               <th class="t1">
+                  <b>Dita e kinemase</b>
+               </th>
+               <th class="t2">
+                  <b>Halloween</b>
+               </th>
+               <th class="t3">
+                  <b>Dita e te dashuruarve</b>
+               </th>
+               <th class="t4">
+                  <b>Festat e fundvitit</b>
+               </th>
+            </tr>
+            <tr>
+               <td class="t1">E premte</td>
+               <td class="t2">31 Tetor</td>
+               <td class="t3">14 Shkurt</td>
+               <td class="t4">25-31 Dhjetor</td>
+            </tr>
+            <tr>
+               <td class="t1">08:00-23:00</td>
+               <td class="t2">18:00-23:00</td>
+               <td class="t3">18:00-23:00</td>
+               <td class="t4">19:00-01:00</td>
+            </tr>
+         </table>
+         <audio id="audio1" src="./files/Oraret.mp3" type="audio/mpeg"></audio>
+      </div>
+      <div id="dkino" class="tabcontent">
+         <h3 class="dita">Dita e kinemase</h3>
+         <h4 class="dita">Cdo te premte FRIDAY NIGHT!</h4>
+         <p class="dita">Cdo te premte eshte dita e kinemase dhe ne kete dite gjeni cmimet me te speciale te biletave.
+            Na vizitoni kete dite dhe do te bindeni.
+            <br>
+            Bileta 2D 2.00&euro;! 
+            <br>
+            Bileta 3D 3.00&euro;!
+         </p>
+         <audio id="audio2" src="./files/Cinema.mp3" type="audio/mpeg"></audio>
+         <figure>
+            <img src="/images/fun1.png" alt="fun" style="width: 220px;" >
+            <figcaption style="margin-left: 50px; ">Qka ju dhurojme!</figcaption>
+         </figure>
+      </div>
+      <div id="ffund" class="tabcontent">
+         <div class="countdown">
+            <h4>PRESIM SE BASHKU VITIN E RI!</h4>
+            <h4 id="countdown"></h4>
+         </div>
+         <section id="ffund1">
+            <p>Tako babagjyshin dhe fito dhurata per fundvit: </p>
+            <ul class="nb">
+               <li>
+                  <abbr title="PlayStation 5">PS5</abbr>
+               </li>
+               <li>Xbox Series X</li>
+               <li>Giftcard ne Dukagjini</li>
+               <li>Giftcard ne Gjirafa</li>
+               <li>dhe shume dhurata tjera...</li>
+            </ul>
+         </section>
+         <div id="Christmas">
+            <h2 class="ffund">WE WISH YOU A MERRY CHRISTMAS AND A HAPPY NEW YEAR!</h2>
+            <p>THE GRINCH Trailer (Premiere vetem tek ne)</p>
+            <video width="300px" height="200px" controls>
+               <source src="./files/Grinch.mp4" type="video/mp4">
+               Grinch Trailer
+            </video>
+         </div>
+         <audio id="audio3" src="./files/Christmas.mp3" type="audio/mpeg"></audio>
+      </div>
+      <div id="ddashuri" class="tabcontent">
+         <h3>Dita e te dashuruarve</h3>
+         <audio id="audio4" src="./files/Lovesong.mp3" type="audio/mpeg"></audio>
+         <div id="ddashuri1">
+            <p id="ddashuri2">Nje nder ditet me te bukura te vitit! Festoni diten e te dashuruarve me me te dashurit tuaj. Shperndani dashuri!
+               Dita e Shen Valentinit eshte ajo qe i duhet shpirtit. Eshte sikur &ccedil;okollata e nxehte, ne dimer te ftohte. 
+               Eshte shperthim i ngjyrave ne nje hapesire te bardhe. Eshte dita kur dashurojme dhe dita kur nuk kemi frike ti 
+               shprehim ndjenjat tona. E ku ka me mire sesa te festoni me nje film romantik?! 
+               Ejani tek ne dhe rezervoni uleset dyshe per &ccedil;ifte. Eksperience e paharruar me oferta speciale per dy persona!
+            </p>
+         </div>
+         <div id="ddashuri3">
+            <h4>Nuk keni te dashur?!</h4>
+            <p>Pa problem! Ne ju gjejme partnerin per Shen Valentin! Aplikoni per te shikuar film se bashku me dikend si ju!</p>
+            <div id="gjej">
+               <form id="forma2">
+                  <label for="emri1">Emri:</label> <br>
+                  <input type="text" id="emri1" name="emri1"> <br>
+                  <label for="mbiemri1">Mbiemri:</label> <br>
+                  <input type="text" id="mbiemri1" name="mbiemri1"> <br>
+                  <label for="mosha">Mosha:</label> <br>
+                  <input type="number" id="mosha" name="mosha"> <br>
+                  <label for="gjinia">Gjinia:</label><br>
+                  <input type="radio" id="mashkull" name="gjinia"> M <br>
+                  <input type="radio" id="femer" name="gjinia"> F <br>
+                  <input type="radio" id="pacaktuar" name="gjinia"> Pacaktuar <br>
+                  <button type="submit" class="btn1">Submit</button> <br>
+               </form>
+            </div>
+         </div>
+         <h3 style="color:white; font-family: 'Lucida Hanwriting', Lucida Handwriting;">YOU ALWAYS GAIN BY GIVING LOVE!</h3>
+      </div>
+      <div id="hallo" class="tabcontent">
+         <h1 class="hallo">SPOOKY SEASON IS HERE!</h1>
+         <p id="hw1">Come Play Trailer(Premiere tek ne)</p>
+         <video id="hw" width="300px" height="200px" controls>
+            <source src="./files/Comeplay.mp4" type="video/mp4">
+            Come Play Trailer
+         </video>
+         <div id="hallo2">
+            <p class="hallo">Ejani ne daten 31 tetor! Behuni gati per makthet me te keqija.
+               <br>
+               Ofertat me interesante i gjeni tek ne: 
+               <br>
+            </p>
+            <ol class="hallo">
+               <li>Kokoshka 
+                  <abbr title="Medium">M</abbr> Pije 
+                  <abbr title="Medium">M</abbr> + Snickers 6.99&euro;! 
+                  <br>
+               </li>
+               <li>Kokoshka 
+                  <abbr title="Small">S</abbr> Pije 
+                  <abbr title="Small">S</abbr> + Rafaelo  4.99&euro;! 
+                  <Br>
+               </li>
+            </ol>
+            <p style="color: white; font-family: 'fantasy', Papyrus;">
+               Mos harroni kostumet!!
+            </p>
+         </div>
+         <div id="hallo1">
+            <label>Per listen e filmave klikoni:</label>
+            <a class="hallo" href="/katalogu.html" target="_blank">Katalogu</a>
+         </div>
+         <audio id="audio5" src="./files/Halloween.mp3" type="audio/mpeg"></audio>
+      </div>
+      <div id="foto1" class="tabcontent">
+         <audio id="audio6" src="./files/Memories.mp3" type="audio/mpeg"></audio>
+         <h3 class="tfoto">Keni marre pjese ne eventet e kaluara? 
+            <Br>
+            Beni upload fotot qe keni bere per t'i kujtuar, ju bashke me ne!
+         </h3>
+         <div id="foto" class="popup">
+            <form id="forma1" class="formcontainer">
+               <label for="emri">Emri:</label>
+               <br>
+               <input type="text" id="emri" name="emri">
+               <br>
+               <label for="mbiemri">Mbiemri:</label>
+               <br>
+               <input type="text" id="mbiemri" name="mbiemri">
+               <br>
+               <label for="eventi1">Eventi:</label>
+               <br>
+               <input type="text" id="eventi1" name="eventi1">
+               <br>
+               <label for="data">Data:</label>
+               <br>
+               <input type="date" id="data" name="data1">
+               <br>
+               <label for="files">Beni upload fotot:</label>
+               <br>
+               <input type="file" id="files" name="fotot" multiple>
+               <br>
+               <button type="submit" class="btn">Upload</button>
+               <br>
+               <button type="button" class="cancel" onclick="closeForm()">Close</button>
+            </form>
+         </div>
+         <button id="ob" class="open-button" onclick="openForm()">Beni upload</button>
+      </div>
+      <footer>
+         <div class="grid-container">
+         <div class="footer-desc">
+            <div class="footer-title">
+               <h5>Kino Fiek</h5>
+            </div>
+            <p>
+               Kinofiek&copy; është website i zhvilluar me HTML5, CSS3,
+               JavaScript dhe jQuery ku përdoruesit mund të shohin se
+               cilët janë filmat më të shikuar të javës, informata rreth
+               &#235;tyre filmave, katalogun e kinemas&#x000EB;, shohin
+               evente t&euml; kinemasë dhe rezervojnë bileta.
+            </p>
+         </div>
+         <div class="footer-nav">
+            <div class="footer-title">
+               <h5>Navigacion</h5>
+            </div>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="/katalogu.html">Katalogu</a></li>
+               <li><a href="/events.html">Evente</a></li>
+               <li><a href="/rezervo.html">Rezervo</a></li>
+               <li><a href="/kontakti">Kontakto</a></li>
+               <li><a target="_blank" href="/extras.html">Extras</a></li>
+            </ul>
+         </div>
+         <div class="cinema">
+            <div class="footer-title">
+               <h5>Lokacioni</h5>
+            </div>
+            <p>
+               Bregu i Diellit, p.n.<br>
+               10000 Prishtinë, <br>
+               Republika e Kosovës
+            </p>
+            <br>
+            <a onclick="calculate()" id="distance-btn">Llogarit distancën</a>
+         </div>
+         <canvas id="darkModeBtn" width="150" height="150"></canvas>
+      </footer>
+      <script src="./scripts/events.js">      
+         dyjat(event, "oraret", "audio1"); 
+         closeForm();    
+         
+      </script>
+   </body>
+</html>
