@@ -31,8 +31,36 @@
       <li><a href="/rezervo.html">Rezervo</a></li>
       <li><a href="/kontakti.html">Kontakto</a></li>
     </ul>
-    <div class="searchIcon">
-      <input class="searchBar" type="text" name="Kerko" placeholder="Kërko filmin" />
+    <div class="searchContainer">
+      <input id="searchBar" type="text" name="Kerko" placeholder="Kërko filmin" />
+      <ul id="results">
+  <li>
+    <a href="#">
+      <img src="/images/movies/HomeAlone.jpg" alt="">
+      <div class="mvtitle">Home Alone</div>
+      </a>
+  </li>
+  <li>
+    <a href="#">
+      <img src="/images/movies/HonestThief.jpg" alt="">
+      <div class="mvtitle">Honest Thief</div></a>
+  </li>
+  <li>
+    <a href="#">
+      <img src="/images/movies/extraction.jpg" alt="">
+      <div class="mvtitle">Extraction</div></a>
+  </li>
+  <li>
+    <a href="#">
+      <img src="/images/movies/Soul.jpeg" alt="">
+      <div class="mvtitle">Soul</div></a>
+  </li>
+  <li>
+    <a href="#">
+      <img src="/images/movies/fatman.jpg" alt="">
+      <div class="mvtitle">Fatman</div></a>
+  </li>
+</ul>
     </div>
   </nav>
 
@@ -240,12 +268,11 @@
   </footer>
 
   <!-- SCRIPTS -->
-
   <script src="/scripts/theme.js"></script>
+
   <script src="/scripts/slideshow.js"></script>
   <script src="/scripts/movies-catalog.js"></script>
   <script src="/scripts/location.js"></script>
-
   <script>
   let canvas = document.getElementById('darkModeBtn')
   let c = canvas.getContext('2d');
@@ -266,6 +293,17 @@
         });
       });
     }
+  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $('#results').hide();
+    $('#searchBar').focusout(()=>{
+        $('#results').slideUp();
+    })
+    $('#searchBar').focusin(()=>{
+        $('#results').slideDown();
+    })
   </script>
 </body>
 
