@@ -30,7 +30,7 @@
                     Në rast se keni ndonjë problem gjatë perdorimit të faqes sonë,
                 ndjehuni të lirë të kontaktoni me ne, për një zgjidhje sa më të shpejtë të problemit tuaj.
            <br> Mund të na kontaktoni përmes telefonit ose duke sqaruar 
-           problemin në formen e paraqitur në të djathtë. <br>
+           problemin në formën e paraqitur në të djathtë. <br>
         Ekipi ynë do të zgjidh problemin në intervalin më të shkurtër kohor.</p></article>
                  </div>
                 
@@ -78,12 +78,14 @@
                 <form action="mailto:kinofiek@gmail.com" method="POST">
                     <h3 class="titull">Forma e Kontaktit:</h3>
                     <div class="input-container ">
-                        <input type="text" name="name" class="input">
+                        <input type="text" name="name" class="input" autocomplete="off" 
+                        pattern="[A-Za-z]" title="Only characters allowed">
                         <label for="">Emri</label>
                         <span>Emri</span>
                     </div>
                     <div class="input-container">
-                        <input type="text" name="mbiemri" class="input">
+                        <input type="text" name="mbiemri" class="input" pattern="[A-Za-z]"
+                        title="Only characters allowed">
                         <label for="">Mbiemri</label>
                         <span>Mbiemri</span>
                     </div>
