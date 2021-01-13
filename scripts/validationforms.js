@@ -46,6 +46,7 @@ document.getElementById('hall1').addEventListener('click',function(){
 
     document.querySelector('.hall1-modal').style.display = 'flex';
     disableScroll(true);
+    alert("Para se të rezervoni sigurohuni qe jeni kyqur ne KinoFiek!");
 });
 
 document.querySelector('.closehall1').addEventListener('click',function(){
@@ -60,6 +61,7 @@ document.getElementById('hall2').addEventListener('click',function(){
 
     document.querySelector('.hall2-modal').style.display = 'flex';
     disableScroll(true);
+    alert("Para se të rezervoni sigurohuni qe jeni kyqur ne KinoFiek!");
 });
 
 document.querySelector('.closehall2').addEventListener('click',function(){
@@ -74,6 +76,7 @@ document.getElementById('hall3').addEventListener('click',function(){
 
     document.querySelector('.hall3-modal').style.display = 'flex';
     disableScroll(true);
+    alert("Para se të rezervoni sigurohuni qe jeni kyqur ne KinoFiek!");
 });
 
 document.querySelector('.closehall3').addEventListener('click',function(){
@@ -87,6 +90,7 @@ document.querySelector('.closehall3').addEventListener('click',function(){
 document.getElementById('hall4').addEventListener('click',function(){
     document.querySelector('.hall4-modal').style.display = 'flex';
     disableScroll(true);
+    alert("Para se të rezervoni sigurohuni qe jeni kyqur ne KinoFiek!");
 });
 
 document.querySelector('.closehall4').addEventListener('click',function(){
