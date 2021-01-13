@@ -25,9 +25,6 @@
                <li>
                   <a href="/kontakti.html">Kontakto</a>
                </li>
-               <li>
-                  <a href="/extras.html">Extras</a>
-               </li>
             </ul>
             <div class="searchIcon">
                <input class="searchBar" type="text" name="Kerko" placeholder="Kerko eventin" />
@@ -134,7 +131,7 @@
             <h4>Nuk keni te dashur?!</h4>
             <p>Pa problem! Ne ju gjejme partnerin per Shen Valentin! Aplikoni per te shikuar film se bashku me dikend si ju!</p>
             <div id="gjej">
-               <form id="forma2">
+               <form id="forma2" name="forma2" onsubmit="return validimi1()">
                   <label for="emri1">Emri:</label> <br>
                   <input type="text" id="emri1" name="emri1"> <br>
                   <label for="mbiemri1">Mbiemri:</label> <br>
@@ -145,6 +142,9 @@
                   <input type="radio" id="mashkull" name="gjinia"> M <br>
                   <input type="radio" id="femer" name="gjinia"> F <br>
                   <input type="radio" id="pacaktuar" name="gjinia"> Pacaktuar <br>
+                  <label for="interested">Jeni i interesuar ne:</label> <br>
+                  <input type="checkbox" id="meshkuj" name="interested" value="me"> Meshkuj <br>
+                   <input type="checkbox" id="femra" name="interested" value="fe"> Femra <br>
                   <button type="submit" class="btn1">Submit</button> <br>
                </form>
             </div>
@@ -193,10 +193,10 @@
             Beni upload fotot qe keni bere per t'i kujtuar, ju bashke me ne!
          </h3>
          <div id="foto" class="popup">
-            <form id="forma1" class="formcontainer">
+            <form id="forma1" class="formcontainer" name="forma1">
                <label for="emri">Emri:</label>
                <br>
-               <input type="text" id="emri" name="emri">
+               <input type="text" id="emri" name="emri" onsubmit="return validimi2()">
                <br>
                <label for="mbiemri">Mbiemri:</label>
                <br>
