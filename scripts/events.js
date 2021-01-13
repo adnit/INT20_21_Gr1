@@ -73,3 +73,60 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "URIME VITI I RI!";
   }
 }, 1000);
+
+function validimi1(){
+  var emri = document.forma2.emri1.value;
+  var mbiemri = document.forma2.mbiemri1.value;
+  var mosha = document.forma2.mosha.value;
+  var gjinia = document.forma2.gjinia.value;
+  var interestedm = document.getElementById('meshkuj');
+  var interestedf = document.getElementById('femra');
+  if(emri == "" || emri==null){
+    alert("Shkruani emrin!");
+    return false;
+  }
+  else if(mbiemri == "" || mbiemri == null){
+    alert("Shkruani mbiemrin!");
+    return false;
+  }
+  else if (isNaN(mosha) || mosha == 0){  
+    alert("Jepni numer per moshen!");  
+    return false;  
+  }
+  else if(mosha < 0){
+    alert("Jepni numer te sakte per moshen!");
+    return false;
+  }
+  else if(gjinia != 'm' && gjinia != 'f' && gjinia != 'p'){
+    alert("Jepni gjinine tuaj!");
+    return false;
+  }
+  else if(!interestedm.checked && !interestedf.checked){
+    alert("Duhet te interesoheni per dike!");
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+function validimi2(){
+  var emri = document.forma1.emri.value;
+  var mbiemri = document.forma1.mbiemri.value;
+  var eventi = document.forma1.eventi1.value;
+  if(emri == "" || emri==null){
+    alert("Shkruani emrin!");
+    return false;
+  }else if(mbiemri == "" || mbiemri == null){
+    alert("Shkruani mbiemrin!");
+    return false;
+  }else if(eventi == "" || eventi == null){
+    alert("Shkruani eventin!");
+    return false;
+  }else if( document.getElementById("files").files.length == 0 ){
+    alert("Nuk keni zgjedhur fotot!");
+    return false;
+  }
+  else {
+    return true;
+  }
+}
