@@ -85,7 +85,7 @@ forms1.addEventListener('click',(s1) => {
   }else if(usernames1.value.length < 5){
     messages1.push('Username must be 5 characters long ');}
     else if(passwords1.value.length < 5){
-      messages1.push('Password must be 5 characters long ');
+      messages1.push('Password must be 5 characters long ');``
     }else if(nrbiletaves1.value <= 0 || nrbiletaves1.value > 120){
       messages1.push('Jep numer valid te biletave.');
     }else {
