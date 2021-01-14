@@ -2,9 +2,7 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open('kinofikecache').then(function (cache) {
       return cache.addAll([
-        '/',
         '/index.html',
-        '/styles/style.css',
         '/scripts/movies-catalog.js',
         '/scripts/slideshow.js',
         '/scripts/location.js',
@@ -16,7 +14,7 @@ self.addEventListener('install', function (e) {
         '/images/movies/Soul.jpeg',
         '/images/movies/Greenland.png',
         '/images/movies/SpenserConfidential.jpg',
-        '/images/searchIcon.png',
+        '/offline.js',
       ]);
     })
   );

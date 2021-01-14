@@ -42,12 +42,12 @@
   </li>
   <li>
     <a href="#">
-      <img src="/images/movies/HonestThief.jpg" alt="">
+      <img src="/images/movies/HonestThief.jpeg" alt="">
       <div class="mvtitle">Honest Thief</div></a>
   </li>
   <li>
     <a href="#">
-      <img src="/images/movies/extraction.jpg" alt="">
+      <img src="/images/movies/Extraction.jpg" alt="">
       <div class="mvtitle">Extraction</div></a>
   </li>
   <li>
@@ -57,7 +57,7 @@
   </li>
   <li>
     <a href="#">
-      <img src="/images/movies/fatman.jpg" alt="">
+      <img src="/images/movies/Fatman.jpg" alt="">
       <div class="mvtitle">Fatman</div></a>
   </li>
 </ul>
@@ -281,12 +281,13 @@
   c.beginPath();
   c.arc(75, 75, 45, 0, 2 * Math.PI);
   c.fillStyle = '#FC9601';
-  c.fill();</script>
+  c.fill();
+  </script>
 
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/scripts/offline.js').then(function (registration) {
+        navigator.serviceWorker.register('/offline.js').then(function (registration) {
           console.log('Service worker success');
         }).catch(function (error) {
           console.log('Service worker failed');
