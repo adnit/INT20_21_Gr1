@@ -39,7 +39,7 @@ function getMovieDetails(movieID) {
       if (movieData.Response != 'True') {
         throw movieData.Error;
       }
-      document.title = movieData.Title;
+      document.title = movieData.Title + ' - Kino FIEK';
       $(poster).attr('src', movieData.Poster);
       $(title).html(movieData.Title);
       term = movieData.Title;
