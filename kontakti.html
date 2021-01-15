@@ -58,13 +58,16 @@
 
             <div class="teksti">
               <div class="pershkrimi">
+              <article>
                 <p>
+                  
                   Kinofiek&copy; është website i zhvilluar me HTML5, CSS3,
                   JavaScript dhe jQuery ku përdoruesit mund të shohin se cilët
                   janë filmat më të shikuar të javës, informata rreth
                   k&#235;tyre filmave, katalogun e kinemas&#x000EB;, shohin
                   evente t&euml; kinemasë dhe rezervojnë bileta.
                 </p>
+                </article>
               </div>
 
               <div class="lokacioni">
@@ -80,30 +83,35 @@
           </div>
         </div>
         <div class="contact-form">
-          <form>
+          <form >
             <h3 class="titull">Forma e Kontaktit:</h3>
             <div class="input-container">
-              <input type="text" name="emri" class="input" autocomplete="off" />
+              <input type="text" name="emri" class="input" autocomplete="off" required/>
               <label for="">Emri</label>
               <span>Emri</span>
             </div>
             <div class="input-container">
-              <input type="text" name="mbiemri" class="input" />
+              <input  type="text" name="mbiemri" class="input" required />
+              
               <label for="">Mbiemri</label>
               <span>Mbiemri</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
+              <input type="email" name="email" class="input" required />
+              <keygen name="artin">
+                
               <label for="">Email</label>
               <span>Email</span>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
+              <textarea name="message" class="input" required></textarea>
               <label for="">Mesazhi</label>
               <span>Mesazhi</span>
             </div>
             <input id="dergoBtn" type="submit" value="Dërgo" class="btn" />
           </form>
+          <output> </output>
+      
         </div>
       </div>
     </div>
@@ -112,13 +120,15 @@
     <script>
       $('#dergoBtn').click(() => {
         if (
-          $('input[type=text][name=emri').val() == '' &&
-          $('input[type=text][name=mbiemri').val() == ''
-        ) {
+          $('input[type=text][name=emri').val() == '' ||
+          $('input[type=text][name=mbiemri').val() == '' 
+         
+          ) { event.preventDefault();
         } else {
           alert(
             'Rrofsh sa malet o ' +
               $('input[type=text][name=emri').val() +
+              " "+
               $('input[type=text][name=mbiemri').val()
           );
         }
