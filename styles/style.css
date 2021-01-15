@@ -126,6 +126,10 @@ nav {
   width: 250px;
 }
 
+.searchContainer li a:hover {
+  cursor: pointer;
+}
+
 #searchBar {
   background-image: url(/images/searchIcon.png);
   color: var(--text-color);
@@ -342,7 +346,6 @@ nav {
   float: left;
   width: 20%;
   height: 210px;
-  border: 1px solid black;
   border-radius: 5px 5px 5px 5px;
 }
 
@@ -454,7 +457,8 @@ footer {
 }
 
 footer p {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  width: 90%;
 }
 
 .grid-container {
@@ -478,7 +482,7 @@ footer p {
 }
 
 .footer-desc p {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .footer-nav {
@@ -498,13 +502,13 @@ footer p {
 }
 .kinemja {
   font-size: 0.8em;
-
   vertical-align: top;
   background-color: var(--text-color);
 }
 
 #distance-btn {
   font-size: 0.8em;
+
   margin-top: 335px;
   padding: 7px;
   text-decoration: none;
@@ -523,7 +527,7 @@ footer p {
 
 @-webkit-keyframes animatebottom {
   from {
-    bottom: -20%;
+    bottom: -15%;
   }
   to {
     bottom: 6%;
@@ -531,7 +535,7 @@ footer p {
 }
 @keyframes animatebottom {
   from {
-    bottom: -20%;
+    bottom: -15%;
   }
   to {
     bottom: 6%;
@@ -571,5 +575,11 @@ footer p {
   }
   footer {
     font-size: 0.8em;
+  }
+}
+
+@media (max-width: 560px) {
+  #distanceBtn {
+    font-size: 0.5em;
   }
 }
