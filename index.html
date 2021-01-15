@@ -264,7 +264,15 @@
       </div>
 
       <canvas id="darkModeBtn" width="150" height="150"></canvas>
-
+      <div title="Website nuk ka funksionalitet te plote" id="offline">
+        <ul>
+          <li><img id='wifi' width="25px" src="/images/nowifi.png" alt="">
+        </li>
+          <li><p id='wifistatus'>Nuk jeni kyqur ne internet</p></li>
+          <li><a id='reload' onclick="location.reload()">Reload</a></li>
+        </ul>
+        
+      </div>
   </footer>
 
   <!-- SCRIPTS -->
@@ -273,20 +281,13 @@
   <script src="/scripts/slideshow.js"></script>
   <script src="/scripts/movies-catalog.js"></script>
   <script src="/scripts/location.js"></script>
-  <script>
-  let canvas = document.getElementById('darkModeBtn')
-  let c = canvas.getContext('2d');
-  clearCanvas(canvas);
-  c.filter = 'blur(1px)'; 
-  c.beginPath();
-  c.arc(75, 75, 45, 0, 2 * Math.PI);
-  c.fillStyle = '#FC9601';
-  c.fill();
-  </script>
 
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
+
+        navigator.onLine ? console.log('online') : offlineState();
+
         navigator.serviceWorker.register('/offline.js').then(function (registration) {
           console.log('Service worker success');
         }).catch(function (error) {
@@ -298,13 +299,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
+    let offline = document.getElementById('offline');
     $('#results').hide();
+
     $('#searchBar').focusout(()=>{
         $('#results').slideUp();
     })
     $('#searchBar').focusin(()=>{
         $('#results').slideDown();
     })
+
+    function offlineState(){
+      offline.style.display = 'flex';
+      $('#wifi').attr('src','/images/nowifi.png');
+      $('#wifistatus').html('Nuk jeni kyqur ne internet')
+      document.getElementById('reload').style.display = 'none'
+      offline.style.backgroundColor = 'rgba(255, 154, 154, 0.6)';
+      document.getElementById('show-more').style.display = 'none';
+    }
+
+    window.addEventListener('online', () => {
+      $('#wifi').attr('src','/images/wifi.png');
+      $('#wifistatus').html('Ju jeni i kyqur tani');
+      document.getElementById('reload').style.display = 'inline';
+      offline.style.backgroundColor = 'rgba(186, 255, 154, 0.6)';      
+    });
+    window.addEventListener('offline', () => {
+        offlineState();
+    });
   </script>
 </body>
 

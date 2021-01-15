@@ -8,13 +8,27 @@ function toggleDarkMode() {
 
   if (document.body.classList.contains('dark-mode')) {
     drawMoon(darkMode);
-  } else drawSun(darkMode);
+    sessionStorage.setItem('theme', 'dark');
+  } else {
+    drawSun(darkMode);
+    sessionStorage.setItem('theme', 'light');
+  }
 }
 function darkModeTime() {
+  let theme = sessionStorage.getItem('theme');
+  if (theme == 'dark') {
+    toggleDarkMode();
+    return;
+  } else if (theme == 'light') {
+    drawSun(darkMode);
+    return;
+  }
+  console.log('test');
   let hour = today.getHours();
   if (hour >= 17 || hour <= 6) {
     toggleDarkMode();
   } else {
+    drawSun(darkMode);
   }
 }
 

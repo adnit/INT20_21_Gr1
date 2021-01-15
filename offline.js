@@ -16,6 +16,11 @@ self.addEventListener('install', function (e) {
         '/images/movies/HonestThief.jpeg',
         '/images/movies/Soul.jpeg',
         '/images/movies/Greenland.png',
+        '/images/movies/Fatman.jpg',
+        '/images/movies/Extraction.jpg',
+        '/images/searchIcon.png',
+        '/images/nowifi.png',
+        '/images/wifi.png',
         '/images/movies/SpenserConfidential.jpg',
       ]);
     })

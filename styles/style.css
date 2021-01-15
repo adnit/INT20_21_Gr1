@@ -41,8 +41,47 @@
 #darkModeBtn {
   z-index: 40;
   position: fixed;
-  bottom: 1%;
+  bottom: 0%;
   right: 1%;
+}
+
+#offline {
+  position: fixed;
+  display: none;
+  z-index: 40;
+  bottom: 6%;
+  left: 4%;
+  width: auto;
+  padding: 10px;
+  height: auto;
+  background-color: rgba(255, 154, 154, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+#offline ul {
+  display: flex;
+}
+
+#offline li {
+  list-style-type: none;
+  margin: auto 5px;
+}
+
+#offline:hover {
+  cursor: auto;
+}
+
+#reload {
+  display: none;
+  color: green;
+}
+
+#reload:hover {
+  cursor: pointer;
+  font-weight: bold;
 }
 
 * {
@@ -484,22 +523,18 @@ footer p {
 
 @-webkit-keyframes animatebottom {
   from {
-    bottom: -50px;
-    opacity: 0;
+    bottom: -20%;
   }
   to {
-    bottom: 0px;
-    opacity: 1;
+    bottom: 6%;
   }
 }
 @keyframes animatebottom {
   from {
-    bottom: -50px;
-    opacity: 0;
+    bottom: -20%;
   }
   to {
-    bottom: 0;
-    opacity: 1;
+    bottom: 6%;
   }
 }
 
