@@ -28,7 +28,7 @@ Per zhvillimin e keti website krahas materialit qe eshte ofruar ne ligjerata dhe
 - [W3Schools](https://www.w3schools.com/),
 - [Codepen](https://codepen.io).
 
-Images, audios, videos hosted on the website are used under Fair Use Act, but if you think your rights are infringed and you want the content taken down, contact [here](adnitkamberi.rks@gmail.com)
+Images, audios, videos hosted on the website are used under Fair Use Act, but if you think your rights are infringed and you want the content taken down, contact [here](mailto:adnitkamberi.rks@gmail.com)
 
 ## License
 
