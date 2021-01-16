@@ -5,6 +5,7 @@
       <meta charset="utf-8"/>
       <link rel="stylesheet" href="/styles/events.css" />
       <link rel="stylesheet" href="/styles/style.css" />
+      <link rel="stylesheet" href="/scripts/location.js"/>
    </head>
    <body>
       <header>
@@ -139,9 +140,9 @@
                   <label for="mosha">Mosha:</label> <br>
                   <input type="number" id="mosha" name="mosha"> <br>
                   <label for="gjinia">Gjinia:</label><br>
-                  <input type="radio" id="mashkull" name="gjinia"> M <br>
-                  <input type="radio" id="femer" name="gjinia"> F <br>
-                  <input type="radio" id="pacaktuar" name="gjinia"> Pacaktuar <br>
+                  <input type="radio" id="mashkull" name="gjinia" value="m"> M <br>
+                  <input type="radio" id="femer" name="gjinia" value="f"> F <br>
+                  <input type="radio" id="pacaktuar" name="gjinia" value="p"> Pacaktuar <br>
                   <label for="interested">Jeni i interesuar ne:</label> <br>
                   <input type="checkbox" id="meshkuj" name="interested" value="me"> Meshkuj <br>
                    <input type="checkbox" id="femra" name="interested" value="fe"> Femra <br>
@@ -262,7 +263,8 @@
          </div>
          <canvas id="darkModeBtn" width="150" height="150"></canvas>
       </footer>
-      <script src="./scripts/events.js">      
+      <script src="/scripts/location.js"></script>
+      <script src="/scripts/events.js">      
          dyjat(event, "oraret", "audio1"); 
          closeForm();    
          
